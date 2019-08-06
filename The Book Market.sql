@@ -391,7 +391,7 @@ go
 ---Insert into Employee_Gender
 insert into Employee_Gender values('Male')
 insert into Employee_Gender values('Female')
-insert into Employee_Gender values('Confidential')
+insert into Employee_Gender values('Other')
 go 
 
 
