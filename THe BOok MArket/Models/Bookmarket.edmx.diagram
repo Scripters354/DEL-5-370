@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="41666854c58e407caafc3c35b7b8fd83" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Book" Width="1.5" PointX="12" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Book_Condition" Width="1.5" PointX="14.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Book_Request" Width="1.5" PointX="12" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Book_Request_Line" Width="1.5" PointX="14.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Book_Status" Width="1.5" PointX="9.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Book_Supplier" Width="1.5" PointX="9.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Condition" Width="1.5" PointX="12" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Employee" Width="1.5" PointX="3.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Employee_Gender" Width="1.5" PointX="1.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Employee_Title" Width="1.5" PointX="1.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Inventory" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Inventory_Level_Status" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Inventory_Supplier" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Inventory_Supplier_Order" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Inventory_Type" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Order_Line" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Order_Status" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Payment_Type" Width="1.5" PointX="3.75" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Prospective_Book" Width="1.5" PointX="12" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Purchase" Width="1.5" PointX="12" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Purchase_Line" Width="1.5" PointX="14.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Received_Supplier_Order" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Return_Line" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Return_Sale" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Return_Sale_Line" Width="1.5" PointX="7.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Return_Supplier_Order" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sale" Width="1.5" PointX="6" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sale_Line" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Stock_Turns" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TaxRate" Width="1.5" PointX="3.75" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="1.5" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User_Role" Width="1.5" PointX="1.5" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Write_Off_Line" Width="1.5" PointX="7.5" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Write_Off_Stock" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Book__BookStatus__58D1301D" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Book_Cond__Book___5CA1C101" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Book_Requ__Book___671F4F74" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Purchase___Book___634EBE90" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Book_Cond__Condi__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Book_Requ__Book___662B2B3B" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Book_Requ__Custo__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Prospecti__BookS__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Purchase__BookSu__5F7E2DAC" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sale__Customer_I__6EC0713C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sale_Line__Custo__76619304" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Employee__EmpGen__6BE40491" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Employee__EmpTit__6AEFE058" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Employee__User_I__69FBBC1F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sale__Employee_I__70A8B9AE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Inventory__Inven__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Inventory__Stock__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Order_Lin__Inven__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Return_Sa__Inven__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sale_Line__Inven__756D6ECB" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Write_Off__Inven__00DF2177" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Write_Off__Inven__7D0E9093" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Inventory__InvSu__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Received___InvSu__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Inventory__SuppO__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Order_Lin__InvSu__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Received___InvSu__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Return_Li__InvSu__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Return_Su__InvSu__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Order_Lin__SuppO__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Received___SuppO__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sale__PaymentTyp__6FB49575" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Purchase___Purch__625A9A57" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Return_Li__Retur__3493CFA7" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Return_Sa__Retur__793DFFAF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Return_Sa__Sale___7A3223E8" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sale__TaxRate_ID__719CDDE7" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sale_Line__Sale___74794A92" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__User__UserRole_I__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Write_Off__Write__7FEAFD3E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

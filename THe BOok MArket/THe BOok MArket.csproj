@@ -45,10 +45,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,6 +130,126 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Book.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bookmarket.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bookmarket.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bookmarket.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bookmarket.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bookmarket.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Condition.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Request.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Request_Line.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Status.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Supplier.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Condition.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee_Gender.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee_Title.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Level_Status.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Supplier.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Supplier_Order.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Type.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order_Line.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order_Status.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Payment_Type.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Prospective_Book.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase_Line.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Received_Supplier_Order.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Return_Line.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Return_Sale.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Return_Sale_Line.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Return_Supplier_Order.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sale.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sale_Line.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Stock_Turns.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaxRate.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_Role.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Write_Off_Line.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Write_Off_Stock.cs">
+      <DependentUpon>Bookmarket.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +272,16 @@
     <Content Include="font-awesome\css\font-awesome.min %282018_09_14 23_39_29 UTC%29.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Bookmarket.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Bookmarket.edmx</DependentUpon>
+      <LastGenOutput>Bookmarket.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Bookmarket.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Bookmarket.edmx</DependentUpon>
+      <LastGenOutput>Bookmarket.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="font-awesome\fonts\FontAwesome %282018_09_14 23_39_29 UTC%29.otf" />
@@ -182,6 +318,13 @@
     <Content Include="font-awesome\scss\_screen-reader %282018_09_14 23_39_29 UTC%29.scss" />
     <Content Include="font-awesome\scss\_stacked %282018_09_14 23_39_29 UTC%29.scss" />
     <Content Include="font-awesome\scss\_variables %282018_09_14 23_39_29 UTC%29.scss" />
+    <EntityDeploy Include="Models\Bookmarket.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Bookmarket.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Bookmarket.edmx.diagram">
+      <DependentUpon>Bookmarket.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -210,7 +353,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -225,6 +367,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

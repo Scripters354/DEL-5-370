@@ -74,3 +74,5 @@ C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MA
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.dll
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\EntityFramework.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\EntityFramework.xml
