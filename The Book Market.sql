@@ -33,7 +33,7 @@ CREATE TABLE Inventory
 [Inventory_ID] int Identity  (100,1) Primary Key Not Null,
 InventoryType_ID int references Inventory_Type (InventoryType_ID),
 Inventory_Name varchar (30),
-Inventory_Description varchar (30), 
+Inventory_Description varchar (150), 
 Inventory_Quantity int ,
 Minimum_Quantity int ,
 StockTurn_ID int references Stock_Turns (StockTurn_ID)
@@ -110,7 +110,7 @@ Emp_Email varchar(30),
 ID_Number bigint,
 EmpTitle_ID int references Employee_Title (EmpTitle_ID),
 EmpGender_ID int references Employee_Gender (EmpGender_ID),
-ImageData varbinary(max)
+ImageData image
 )
 GO
 
@@ -120,8 +120,7 @@ Customer_ID int Identity (2000,1) Primary Key Not Null,
 Customer_Name varchar(50) ,
 Customer_Surname varchar(50), 
 Customer_Email varchar(30),
-Customer_Contact int , 
-
+Customer_Contact bigint, 
 )
 GO
 
@@ -375,8 +374,8 @@ go
 INSERT INTO Inventory values('50','0.5mm Ball Pen','0.5mm fine point ball pen','135','30',1)
 INSERT INTO Inventory values('50','0.7mm Led Refills','0.7mm Graphite Led Stencils','100','30',4)
 INSERT INTO Inventory values('50','7pt Eraser','7pt Eraser Hardnose 7x6 Square','202','25',4)
-INSERT INTO Inventory values('90','Impresario Earphones','1m Long In-Ear Earphones','87','10',7)
-INSERT INTO Inventory values('90','Deadpool Noise Earphones','Passive Noise Cancelling Earphones','58','15',9)
+INSERT INTO Inventory values('70','Impresario Earphones','1m Long In-Ear Earphones','87','10',7)
+INSERT INTO Inventory values('70','Deadpool Noise Earphones','Passive Noise Cancelling Earphones','58','15',10)
 go
 
 
@@ -411,8 +410,8 @@ insert into TaxRate values('State Product Tax','15')
 go
 
 ---Insert into Employee
-INSERT INTO Employee values('900','Marell','Vapong','78 Hatfiled Drive, Pretoria','0733267855','mvapong@mailme.com','8605459488759','205','96000')
-INSERT INTO Employee values('902','Mavis','Mavresh','256 Stanza Bo Timer, Arcadia','0785565684','mavresh@mailme.com','778954256315','210','96000')
+INSERT INTO Employee values('900','Marell','Vapong','78 Hatfiled Drive, Pretoria','0733267855','mvapong@mailme.com','8605459488759','205','96000','0x010203040506')
+INSERT INTO Employee values('902','Mavis','Mavresh','256 Stanza Bo Timer, Arcadia','0785565684','mavresh@mailme.com','778954256315','210','96000','0x010203040507')
 Go
 
 ---Insert into Customer
