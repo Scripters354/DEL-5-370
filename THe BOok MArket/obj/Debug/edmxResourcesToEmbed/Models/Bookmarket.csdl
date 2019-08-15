@@ -132,7 +132,7 @@
     <Property Name="Inventory_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="InventoryType_ID" Type="Int32" />
     <Property Name="Inventory_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Inventory_Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Inventory_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Inventory_Quantity" Type="Int32" />
     <Property Name="Minimum_Quantity" Type="Int32" />
     <Property Name="StockTurn_ID" Type="Int32" />
@@ -143,6 +143,8 @@
     <NavigationProperty Name="Sale_Line" Relationship="Self.FK__Sale_Line__Inven__756D6ECB" FromRole="Inventory" ToRole="Sale_Line" />
     <NavigationProperty Name="Write_Off_Line" Relationship="Self.FK__Write_Off__Inven__00DF2177" FromRole="Inventory" ToRole="Write_Off_Line" />
     <NavigationProperty Name="Write_Off_Stock" Relationship="Self.FK__Write_Off__Inven__7D0E9093" FromRole="Inventory" ToRole="Write_Off_Stock" />
+    <NavigationProperty Name="Inventory_Level" Relationship="Model.FK__Inventory__Inven__1A14E395" FromRole="Inventory" ToRole="Inventory_Level" />
+    <NavigationProperty Name="Inventory_Price" Relationship="Model.FK__Inventory__Inven__1DE57479" FromRole="Inventory" ToRole="Inventory_Price" />
   </EntityType>
   <EntityType Name="Inventory_Level_Status">
     <Key>
@@ -150,6 +152,7 @@
     </Key>
     <Property Name="InvLevel_Status_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="InvLevel_Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Inventory_Level" Relationship="Model.FK__Inventory__InvLe__1B0907CE" FromRole="Inventory_Level_Status" ToRole="Inventory_Level" />
   </EntityType>
   <EntityType Name="Inventory_Supplier">
     <Key>
@@ -366,9 +369,9 @@
     </Key>
     <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserRole_ID" Type="Int32" />
-    <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="UserPassword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="GUID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GUID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="GUIDExpiry" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__User_I__69FBBC1F" FromRole="User" ToRole="Employee" />
     <NavigationProperty Name="User_Role" Relationship="Self.FK__User__UserRole_I__4BAC3F29" FromRole="User" ToRole="User_Role" />
@@ -1078,5 +1081,75 @@
       <End Role="Write_Off_Stock" EntitySet="Write_Off_Stock" />
       <End Role="Write_Off_Line" EntitySet="Write_Off_Line" />
     </AssociationSet>
+    <EntitySet Name="Inventory_Level" EntityType="Model.Inventory_Level" />
+    <EntitySet Name="Inventory_Price" EntityType="Model.Inventory_Price" />
+    <AssociationSet Name="FK__Inventory__Inven__1A14E395" Association="Model.FK__Inventory__Inven__1A14E395">
+      <End Role="Inventory" EntitySet="Inventories" />
+      <End Role="Inventory_Level" EntitySet="Inventory_Level" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__Inven__1DE57479" Association="Model.FK__Inventory__Inven__1DE57479">
+      <End Role="Inventory" EntitySet="Inventories" />
+      <End Role="Inventory_Price" EntitySet="Inventory_Price" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__InvLe__1B0907CE" Association="Model.FK__Inventory__InvLe__1B0907CE">
+      <End Role="Inventory_Level_Status" EntitySet="Inventory_Level_Status" />
+      <End Role="Inventory_Level" EntitySet="Inventory_Level" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Inventory_Level">
+    <Key>
+      <PropertyRef Name="Inventory_ID" />
+      <PropertyRef Name="InvLevel_Status_ID" />
+    </Key>
+    <Property Name="Inventory_ID" Type="Int32" Nullable="false" />
+    <Property Name="InvLevel_Status_ID" Type="Int32" Nullable="false" />
+    <Property Name="InvLevel_Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Inventory" Relationship="Model.FK__Inventory__Inven__1A14E395" FromRole="Inventory_Level" ToRole="Inventory" />
+    <NavigationProperty Name="Inventory_Level_Status" Relationship="Model.FK__Inventory__InvLe__1B0907CE" FromRole="Inventory_Level" ToRole="Inventory_Level_Status" />
+  </EntityType>
+  <EntityType Name="Inventory_Price">
+    <Key>
+      <PropertyRef Name="Price_ID" />
+    </Key>
+    <Property Name="Price_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Inventory_ID" Type="Int32" />
+    <Property Name="DateActive" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Inventory" Relationship="Model.FK__Inventory__Inven__1DE57479" FromRole="Inventory_Price" ToRole="Inventory" />
+  </EntityType>
+  <Association Name="FK__Inventory__Inven__1A14E395">
+    <End Type="Model.Inventory" Role="Inventory" Multiplicity="1" />
+    <End Type="Model.Inventory_Level" Role="Inventory_Level" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory">
+        <PropertyRef Name="Inventory_ID" />
+      </Principal>
+      <Dependent Role="Inventory_Level">
+        <PropertyRef Name="Inventory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__Inven__1DE57479">
+    <End Type="Model.Inventory" Role="Inventory" Multiplicity="0..1" />
+    <End Type="Model.Inventory_Price" Role="Inventory_Price" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory">
+        <PropertyRef Name="Inventory_ID" />
+      </Principal>
+      <Dependent Role="Inventory_Price">
+        <PropertyRef Name="Inventory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__InvLe__1B0907CE">
+    <End Type="Model.Inventory_Level_Status" Role="Inventory_Level_Status" Multiplicity="1" />
+    <End Type="Model.Inventory_Level" Role="Inventory_Level" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory_Level_Status">
+        <PropertyRef Name="InvLevel_Status_ID" />
+      </Principal>
+      <Dependent Role="Inventory_Level">
+        <PropertyRef Name="InvLevel_Status_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

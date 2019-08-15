@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3a42a2cbf224489692a8726d353f4080" Name="Diagram1">
+        <EntityTypeShape EntityType="The_Book_MarketModel.Book" Width="1.5" PointX="13" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Book_Condition" Width="1.5" PointX="15.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Book_Request" Width="1.5" PointX="13" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Book_Request_Line" Width="1.5" PointX="15.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Book_Status" Width="1.5" PointX="10.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Book_Supplier" Width="1.5" PointX="10.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Condition" Width="1.5" PointX="13" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Customer" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Employee" Width="1.5" PointX="3.75" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Employee_Gender" Width="1.5" PointX="1.5" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Employee_Title" Width="1.5" PointX="1.5" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Inventory" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Inventory_Level" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Inventory_Level_Status" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Inventory_Price" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Inventory_Supplier" Width="1.5" PointX="3.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Inventory_Supplier_Order" Width="1.5" PointX="6" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Inventory_Type" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Order_Line" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Order_Status" Width="1.5" PointX="3.75" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Payment_Type" Width="1.5" PointX="3.75" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Prospective_Book" Width="1.5" PointX="13" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Purchase" Width="1.5" PointX="13" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Purchase_Line" Width="1.5" PointX="15.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Received_Supplier_Order" Width="1.5" PointX="8.25" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Return_Line" Width="1.5" PointX="10.5" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Return_Sale" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Return_Sale_Line" Width="1.5" PointX="7.5" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Return_Supplier_Order" Width="1.5" PointX="8.25" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Sale" Width="1.5" PointX="6" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Sale_Line" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Stock_Turns" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.TaxRate" Width="1.5" PointX="3.75" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.User" Width="1.5" PointX="1.5" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.User_Role" Width="1.5" PointX="1.5" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Write_Off_Line" Width="1.5" PointX="10.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="The_Book_MarketModel.Write_Off_Stock" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Book__BookStatus__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Book_Cond__Book___5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Book_Requ__Book___656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Purchase___Book___5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Book_Cond__Condi__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Book_Requ__Book___6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Book_Requ__Custo__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Prospecti__BookS__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Purchase__BookSu__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Sale__Customer_I__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Sale_Line__Custo__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Employee__EmpGen__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Employee__EmpTit__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Employee__User_I__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Sale__Employee_I__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Inventory__Inven__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Inventory__Inven__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Inventory__Inven__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Inventory__Stock__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Order_Lin__Inven__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Return_Sa__Inven__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Sale_Line__Inven__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Write_Off__Inven__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Write_Off__Inven__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Inventory__InvLe__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Inventory__InvSu__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Received___InvSu__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Inventory__SuppO__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Order_Lin__InvSu__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Received___InvSu__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Return_Li__InvSu__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Return_Su__InvSu__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Order_Lin__SuppO__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Received___SuppO__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Sale__PaymentTyp__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Purchase___Purch__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Return_Li__Retur__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Return_Sa__Retur__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Return_Sa__Sale___4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Sale__TaxRate_ID__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Sale_Line__Sale___398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__User__UserRole_I__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="The_Book_MarketModel.FK__Write_Off__Write__47DBAE45" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Book">
     <Key>
       <PropertyRef Name="Book_ID" />
@@ -70,7 +70,7 @@
     <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
     <Property Name="Customer_Surname" Type="varchar" MaxLength="50" />
     <Property Name="Customer_Email" Type="varchar" MaxLength="30" />
-    <Property Name="Customer_Contact" Type="int" />
+    <Property Name="Customer_Contact" Type="bigint" />
   </EntityType>
   <EntityType Name="Employee">
     <Key>
@@ -86,7 +86,7 @@
     <Property Name="ID_Number" Type="bigint" />
     <Property Name="EmpTitle_ID" Type="int" />
     <Property Name="EmpGender_ID" Type="int" />
-    <Property Name="ImageData" Type="varbinary(max)" />
+    <Property Name="ImageData" Type="image" />
   </EntityType>
   <EntityType Name="Employee_Gender">
     <Key>
@@ -109,10 +109,19 @@
     <Property Name="Inventory_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="InventoryType_ID" Type="int" />
     <Property Name="Inventory_Name" Type="varchar" MaxLength="30" />
-    <Property Name="Inventory_Description" Type="varchar" MaxLength="30" />
+    <Property Name="Inventory_Description" Type="varchar" MaxLength="150" />
     <Property Name="Inventory_Quantity" Type="int" />
     <Property Name="Minimum_Quantity" Type="int" />
     <Property Name="StockTurn_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Inventory_Level">
+    <Key>
+      <PropertyRef Name="Inventory_ID" />
+      <PropertyRef Name="InvLevel_Status_ID" />
+    </Key>
+    <Property Name="Inventory_ID" Type="int" Nullable="false" />
+    <Property Name="InvLevel_Status_ID" Type="int" Nullable="false" />
+    <Property Name="InvLevel_Description" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="Inventory_Level_Status">
     <Key>
@@ -120,6 +129,14 @@
     </Key>
     <Property Name="InvLevel_Status_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="InvLevel_Description" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Inventory_Price">
+    <Key>
+      <PropertyRef Name="Price_ID" />
+    </Key>
+    <Property Name="Price_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Inventory_ID" Type="int" />
+    <Property Name="DateActive" Type="date" />
   </EntityType>
   <EntityType Name="Inventory_Supplier">
     <Key>
@@ -293,9 +310,9 @@
     </Key>
     <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserRole_ID" Type="int" />
-    <Property Name="UserName" Type="varchar" MaxLength="30" />
-    <Property Name="UserPassword" Type="varchar" MaxLength="30" />
-    <Property Name="GUID" Type="varchar" MaxLength="30" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="UserPassword" Type="varchar(max)" />
+    <Property Name="GUID" Type="varchar" MaxLength="100" />
     <Property Name="GUIDExpiry" Type="datetime" />
   </EntityType>
   <EntityType Name="User_Role">
@@ -322,7 +339,7 @@
     <Property Name="Write_Off_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Inventory_ID" Type="int" />
   </EntityType>
-  <Association Name="FK__Book__BookStatus__58D1301D">
+  <Association Name="FK__Book__BookStatus__5441852A">
     <End Role="Book_Status" Type="Self.Book_Status" Multiplicity="0..1" />
     <End Role="Book" Type="Self.Book" Multiplicity="*" />
     <ReferentialConstraint>
@@ -334,7 +351,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Book_Cond__Book___5CA1C101">
+  <Association Name="FK__Book_Cond__Book___5812160E">
     <End Role="Book" Type="Self.Book" Multiplicity="1" />
     <End Role="Book_Condition" Type="Self.Book_Condition" Multiplicity="*" />
     <ReferentialConstraint>
@@ -346,7 +363,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Book_Cond__Condi__5BAD9CC8">
+  <Association Name="FK__Book_Cond__Condi__571DF1D5">
     <End Role="Condition" Type="Self.Condition" Multiplicity="1" />
     <End Role="Book_Condition" Type="Self.Book_Condition" Multiplicity="*" />
     <ReferentialConstraint>
@@ -358,7 +375,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Book_Requ__Book___662B2B3B">
+  <Association Name="FK__Book_Requ__Book___6477ECF3">
     <End Role="Book_Request" Type="Self.Book_Request" Multiplicity="1" />
     <End Role="Book_Request_Line" Type="Self.Book_Request_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -370,7 +387,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Book_Requ__Book___671F4F74">
+  <Association Name="FK__Book_Requ__Book___656C112C">
     <End Role="Book" Type="Self.Book" Multiplicity="1" />
     <End Role="Book_Request_Line" Type="Self.Book_Request_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -382,7 +399,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Book_Requ__Custo__1AD3FDA4">
+  <Association Name="FK__Book_Requ__Custo__619B8048">
     <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
     <End Role="Book_Request" Type="Self.Book_Request" Multiplicity="*" />
     <ReferentialConstraint>
@@ -394,7 +411,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee__EmpGen__6BE40491">
+  <Association Name="FK__Employee__EmpGen__2D27B809">
     <End Role="Employee_Gender" Type="Self.Employee_Gender" Multiplicity="0..1" />
     <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -406,7 +423,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee__EmpTit__6AEFE058">
+  <Association Name="FK__Employee__EmpTit__2C3393D0">
     <End Role="Employee_Title" Type="Self.Employee_Title" Multiplicity="0..1" />
     <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -418,7 +435,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee__User_I__69FBBC1F">
+  <Association Name="FK__Employee__User_I__2B3F6F97">
     <End Role="User" Type="Self.User" Multiplicity="0..1" />
     <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -430,7 +447,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inventory__Inven__787EE5A0">
+  <Association Name="FK__Inventory__Inven__164452B1">
     <End Role="Inventory_Type" Type="Self.Inventory_Type" Multiplicity="0..1" />
     <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
     <ReferentialConstraint>
@@ -442,7 +459,43 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inventory__InvSu__245D67DE">
+  <Association Name="FK__Inventory__Inven__1A14E395">
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="1" />
+    <End Role="Inventory_Level" Type="Self.Inventory_Level" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory">
+        <PropertyRef Name="Inventory_ID" />
+      </Principal>
+      <Dependent Role="Inventory_Level">
+        <PropertyRef Name="Inventory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__Inven__1DE57479">
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="0..1" />
+    <End Role="Inventory_Price" Type="Self.Inventory_Price" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory">
+        <PropertyRef Name="Inventory_ID" />
+      </Principal>
+      <Dependent Role="Inventory_Price">
+        <PropertyRef Name="Inventory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__InvLe__1B0907CE">
+    <End Role="Inventory_Level_Status" Type="Self.Inventory_Level_Status" Multiplicity="1" />
+    <End Role="Inventory_Level" Type="Self.Inventory_Level" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory_Level_Status">
+        <PropertyRef Name="InvLevel_Status_ID" />
+      </Principal>
+      <Dependent Role="Inventory_Level">
+        <PropertyRef Name="InvLevel_Status_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__InvSu__6C190EBB">
     <End Role="Inventory_Supplier" Type="Self.Inventory_Supplier" Multiplicity="0..1" />
     <End Role="Inventory_Supplier_Order" Type="Self.Inventory_Supplier_Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -454,7 +507,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inventory__Stock__797309D9">
+  <Association Name="FK__Inventory__Stock__173876EA">
     <End Role="Stock_Turns" Type="Self.Stock_Turns" Multiplicity="0..1" />
     <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
     <ReferentialConstraint>
@@ -466,7 +519,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inventory__SuppO__25518C17">
+  <Association Name="FK__Inventory__SuppO__6D0D32F4">
     <End Role="Order_Status" Type="Self.Order_Status" Multiplicity="0..1" />
     <End Role="Inventory_Supplier_Order" Type="Self.Inventory_Supplier_Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -478,7 +531,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Order_Lin__Inven__29221CFB">
+  <Association Name="FK__Order_Lin__Inven__70DDC3D8">
     <End Role="Inventory" Type="Self.Inventory" Multiplicity="1" />
     <End Role="Order_Line" Type="Self.Order_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -490,7 +543,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Order_Lin__InvSu__282DF8C2">
+  <Association Name="FK__Order_Lin__InvSu__6FE99F9F">
     <End Role="Inventory_Supplier_Order" Type="Self.Inventory_Supplier_Order" Multiplicity="1" />
     <End Role="Order_Line" Type="Self.Order_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -502,7 +555,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Order_Lin__SuppO__2A164134">
+  <Association Name="FK__Order_Lin__SuppO__71D1E811">
     <End Role="Order_Status" Type="Self.Order_Status" Multiplicity="0..1" />
     <End Role="Order_Line" Type="Self.Order_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -514,7 +567,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Prospecti__BookS__1920BF5C">
+  <Association Name="FK__Prospecti__BookS__5165187F">
     <End Role="Book_Supplier" Type="Self.Book_Supplier" Multiplicity="0..1" />
     <End Role="Prospective_Book" Type="Self.Prospective_Book" Multiplicity="*" />
     <ReferentialConstraint>
@@ -526,7 +579,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Purchase___Book___634EBE90">
+  <Association Name="FK__Purchase___Book___5EBF139D">
     <End Role="Book" Type="Self.Book" Multiplicity="1" />
     <End Role="Purchase_Line" Type="Self.Purchase_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -538,7 +591,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Purchase___Purch__625A9A57">
+  <Association Name="FK__Purchase___Purch__5DCAEF64">
     <End Role="Purchase" Type="Self.Purchase" Multiplicity="1" />
     <End Role="Purchase_Line" Type="Self.Purchase_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -550,7 +603,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Purchase__BookSu__5F7E2DAC">
+  <Association Name="FK__Purchase__BookSu__5AEE82B9">
     <End Role="Book_Supplier" Type="Self.Book_Supplier" Multiplicity="0..1" />
     <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
     <ReferentialConstraint>
@@ -562,7 +615,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Received___InvSu__2CF2ADDF">
+  <Association Name="FK__Received___InvSu__74AE54BC">
     <End Role="Inventory_Supplier_Order" Type="Self.Inventory_Supplier_Order" Multiplicity="0..1" />
     <End Role="Received_Supplier_Order" Type="Self.Received_Supplier_Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -574,7 +627,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Received___InvSu__2DE6D218">
+  <Association Name="FK__Received___InvSu__75A278F5">
     <End Role="Inventory_Supplier" Type="Self.Inventory_Supplier" Multiplicity="0..1" />
     <End Role="Received_Supplier_Order" Type="Self.Received_Supplier_Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -586,7 +639,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Received___SuppO__2EDAF651">
+  <Association Name="FK__Received___SuppO__76969D2E">
     <End Role="Order_Status" Type="Self.Order_Status" Multiplicity="0..1" />
     <End Role="Received_Supplier_Order" Type="Self.Received_Supplier_Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -598,7 +651,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Return_Li__InvSu__3587F3E0">
+  <Association Name="FK__Return_Li__InvSu__7D439ABD">
     <End Role="Inventory_Supplier_Order" Type="Self.Inventory_Supplier_Order" Multiplicity="1" />
     <End Role="Return_Line" Type="Self.Return_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -610,7 +663,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Return_Li__Retur__3493CFA7">
+  <Association Name="FK__Return_Li__Retur__7C4F7684">
     <End Role="Return_Supplier_Order" Type="Self.Return_Supplier_Order" Multiplicity="1" />
     <End Role="Return_Line" Type="Self.Return_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -622,7 +675,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Return_Sa__Inven__4B7734FF">
+  <Association Name="FK__Return_Sa__Inven__3E52440B">
     <End Role="Inventory" Type="Self.Inventory" Multiplicity="0..1" />
     <End Role="Return_Sale" Type="Self.Return_Sale" Multiplicity="*" />
     <ReferentialConstraint>
@@ -634,7 +687,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Return_Sa__Retur__793DFFAF">
+  <Association Name="FK__Return_Sa__Retur__412EB0B6">
     <End Role="Return_Sale" Type="Self.Return_Sale" Multiplicity="1" />
     <End Role="Return_Sale_Line" Type="Self.Return_Sale_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -646,7 +699,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Return_Sa__Sale___7A3223E8">
+  <Association Name="FK__Return_Sa__Sale___4222D4EF">
     <End Role="Sale" Type="Self.Sale" Multiplicity="1" />
     <End Role="Return_Sale_Line" Type="Self.Return_Sale_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -658,7 +711,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Return_Su__InvSu__31B762FC">
+  <Association Name="FK__Return_Su__InvSu__797309D9">
     <End Role="Inventory_Supplier_Order" Type="Self.Inventory_Supplier_Order" Multiplicity="0..1" />
     <End Role="Return_Supplier_Order" Type="Self.Return_Supplier_Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -670,7 +723,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Sale__Customer_I__6EC0713C">
+  <Association Name="FK__Sale__Customer_I__33D4B598">
     <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
     <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
     <ReferentialConstraint>
@@ -682,7 +735,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Sale__Employee_I__70A8B9AE">
+  <Association Name="FK__Sale__Employee_I__35BCFE0A">
     <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
     <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
     <ReferentialConstraint>
@@ -694,7 +747,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Sale__PaymentTyp__6FB49575">
+  <Association Name="FK__Sale__PaymentTyp__34C8D9D1">
     <End Role="Payment_Type" Type="Self.Payment_Type" Multiplicity="0..1" />
     <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
     <ReferentialConstraint>
@@ -706,7 +759,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Sale__TaxRate_ID__719CDDE7">
+  <Association Name="FK__Sale__TaxRate_ID__36B12243">
     <End Role="TaxRate" Type="Self.TaxRate" Multiplicity="0..1" />
     <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
     <ReferentialConstraint>
@@ -718,7 +771,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Sale_Line__Custo__76619304">
+  <Association Name="FK__Sale_Line__Custo__3B75D760">
     <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
     <End Role="Sale_Line" Type="Self.Sale_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -730,7 +783,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Sale_Line__Inven__756D6ECB">
+  <Association Name="FK__Sale_Line__Inven__3A81B327">
     <End Role="Inventory" Type="Self.Inventory" Multiplicity="1" />
     <End Role="Sale_Line" Type="Self.Sale_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -742,7 +795,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Sale_Line__Sale___74794A92">
+  <Association Name="FK__Sale_Line__Sale___398D8EEE">
     <End Role="Sale" Type="Self.Sale" Multiplicity="1" />
     <End Role="Sale_Line" Type="Self.Sale_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -754,7 +807,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__User__UserRole_I__4BAC3F29">
+  <Association Name="FK__User__UserRole_I__24927208">
     <End Role="User_Role" Type="Self.User_Role" Multiplicity="0..1" />
     <End Role="User" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
@@ -766,19 +819,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Write_Off__Inven__00DF2177">
-    <End Role="Inventory" Type="Self.Inventory" Multiplicity="1" />
-    <End Role="Write_Off_Line" Type="Self.Write_Off_Line" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Inventory">
-        <PropertyRef Name="Inventory_ID" />
-      </Principal>
-      <Dependent Role="Write_Off_Line">
-        <PropertyRef Name="Inventory_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Write_Off__Inven__7D0E9093">
+  <Association Name="FK__Write_Off__Inven__44FF419A">
     <End Role="Inventory" Type="Self.Inventory" Multiplicity="0..1" />
     <End Role="Write_Off_Stock" Type="Self.Write_Off_Stock" Multiplicity="*" />
     <ReferentialConstraint>
@@ -790,7 +831,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Write_Off__Write__7FEAFD3E">
+  <Association Name="FK__Write_Off__Inven__48CFD27E">
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="1" />
+    <End Role="Write_Off_Line" Type="Self.Write_Off_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory">
+        <PropertyRef Name="Inventory_ID" />
+      </Principal>
+      <Dependent Role="Write_Off_Line">
+        <PropertyRef Name="Inventory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Write_Off__Write__47DBAE45">
     <End Role="Write_Off_Stock" Type="Self.Write_Off_Stock" Multiplicity="1" />
     <End Role="Write_Off_Line" Type="Self.Write_Off_Line" Multiplicity="*" />
     <ReferentialConstraint>
@@ -815,7 +868,9 @@
     <EntitySet Name="Employee_Gender" EntityType="Self.Employee_Gender" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employee_Title" EntityType="Self.Employee_Title" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventory_Level" EntityType="Self.Inventory_Level" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Inventory_Level_Status" EntityType="Self.Inventory_Level_Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventory_Price" EntityType="Self.Inventory_Price" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Inventory_Supplier" EntityType="Self.Inventory_Supplier" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Inventory_Supplier_Order" EntityType="Self.Inventory_Supplier_Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Inventory_Type" EntityType="Self.Inventory_Type" Schema="dbo" store:Type="Tables" />
@@ -838,163 +893,175 @@
     <EntitySet Name="User_Role" EntityType="Self.User_Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Write_Off_Line" EntityType="Self.Write_Off_Line" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Write_Off_Stock" EntityType="Self.Write_Off_Stock" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Book__BookStatus__58D1301D" Association="Self.FK__Book__BookStatus__58D1301D">
+    <AssociationSet Name="FK__Book__BookStatus__5441852A" Association="Self.FK__Book__BookStatus__5441852A">
       <End Role="Book_Status" EntitySet="Book_Status" />
       <End Role="Book" EntitySet="Book" />
     </AssociationSet>
-    <AssociationSet Name="FK__Book_Cond__Book___5CA1C101" Association="Self.FK__Book_Cond__Book___5CA1C101">
+    <AssociationSet Name="FK__Book_Cond__Book___5812160E" Association="Self.FK__Book_Cond__Book___5812160E">
       <End Role="Book" EntitySet="Book" />
       <End Role="Book_Condition" EntitySet="Book_Condition" />
     </AssociationSet>
-    <AssociationSet Name="FK__Book_Cond__Condi__5BAD9CC8" Association="Self.FK__Book_Cond__Condi__5BAD9CC8">
+    <AssociationSet Name="FK__Book_Cond__Condi__571DF1D5" Association="Self.FK__Book_Cond__Condi__571DF1D5">
       <End Role="Condition" EntitySet="Condition" />
       <End Role="Book_Condition" EntitySet="Book_Condition" />
     </AssociationSet>
-    <AssociationSet Name="FK__Book_Requ__Book___662B2B3B" Association="Self.FK__Book_Requ__Book___662B2B3B">
+    <AssociationSet Name="FK__Book_Requ__Book___6477ECF3" Association="Self.FK__Book_Requ__Book___6477ECF3">
       <End Role="Book_Request" EntitySet="Book_Request" />
       <End Role="Book_Request_Line" EntitySet="Book_Request_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Book_Requ__Book___671F4F74" Association="Self.FK__Book_Requ__Book___671F4F74">
+    <AssociationSet Name="FK__Book_Requ__Book___656C112C" Association="Self.FK__Book_Requ__Book___656C112C">
       <End Role="Book" EntitySet="Book" />
       <End Role="Book_Request_Line" EntitySet="Book_Request_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Book_Requ__Custo__1AD3FDA4" Association="Self.FK__Book_Requ__Custo__1AD3FDA4">
+    <AssociationSet Name="FK__Book_Requ__Custo__619B8048" Association="Self.FK__Book_Requ__Custo__619B8048">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="Book_Request" EntitySet="Book_Request" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee__EmpGen__6BE40491" Association="Self.FK__Employee__EmpGen__6BE40491">
+    <AssociationSet Name="FK__Employee__EmpGen__2D27B809" Association="Self.FK__Employee__EmpGen__2D27B809">
       <End Role="Employee_Gender" EntitySet="Employee_Gender" />
       <End Role="Employee" EntitySet="Employee" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee__EmpTit__6AEFE058" Association="Self.FK__Employee__EmpTit__6AEFE058">
+    <AssociationSet Name="FK__Employee__EmpTit__2C3393D0" Association="Self.FK__Employee__EmpTit__2C3393D0">
       <End Role="Employee_Title" EntitySet="Employee_Title" />
       <End Role="Employee" EntitySet="Employee" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee__User_I__69FBBC1F" Association="Self.FK__Employee__User_I__69FBBC1F">
+    <AssociationSet Name="FK__Employee__User_I__2B3F6F97" Association="Self.FK__Employee__User_I__2B3F6F97">
       <End Role="User" EntitySet="User" />
       <End Role="Employee" EntitySet="Employee" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inventory__Inven__787EE5A0" Association="Self.FK__Inventory__Inven__787EE5A0">
+    <AssociationSet Name="FK__Inventory__Inven__164452B1" Association="Self.FK__Inventory__Inven__164452B1">
       <End Role="Inventory_Type" EntitySet="Inventory_Type" />
       <End Role="Inventory" EntitySet="Inventory" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inventory__InvSu__245D67DE" Association="Self.FK__Inventory__InvSu__245D67DE">
+    <AssociationSet Name="FK__Inventory__Inven__1A14E395" Association="Self.FK__Inventory__Inven__1A14E395">
+      <End Role="Inventory" EntitySet="Inventory" />
+      <End Role="Inventory_Level" EntitySet="Inventory_Level" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__Inven__1DE57479" Association="Self.FK__Inventory__Inven__1DE57479">
+      <End Role="Inventory" EntitySet="Inventory" />
+      <End Role="Inventory_Price" EntitySet="Inventory_Price" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__InvLe__1B0907CE" Association="Self.FK__Inventory__InvLe__1B0907CE">
+      <End Role="Inventory_Level_Status" EntitySet="Inventory_Level_Status" />
+      <End Role="Inventory_Level" EntitySet="Inventory_Level" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__InvSu__6C190EBB" Association="Self.FK__Inventory__InvSu__6C190EBB">
       <End Role="Inventory_Supplier" EntitySet="Inventory_Supplier" />
       <End Role="Inventory_Supplier_Order" EntitySet="Inventory_Supplier_Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inventory__Stock__797309D9" Association="Self.FK__Inventory__Stock__797309D9">
+    <AssociationSet Name="FK__Inventory__Stock__173876EA" Association="Self.FK__Inventory__Stock__173876EA">
       <End Role="Stock_Turns" EntitySet="Stock_Turns" />
       <End Role="Inventory" EntitySet="Inventory" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inventory__SuppO__25518C17" Association="Self.FK__Inventory__SuppO__25518C17">
+    <AssociationSet Name="FK__Inventory__SuppO__6D0D32F4" Association="Self.FK__Inventory__SuppO__6D0D32F4">
       <End Role="Order_Status" EntitySet="Order_Status" />
       <End Role="Inventory_Supplier_Order" EntitySet="Inventory_Supplier_Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Order_Lin__Inven__29221CFB" Association="Self.FK__Order_Lin__Inven__29221CFB">
+    <AssociationSet Name="FK__Order_Lin__Inven__70DDC3D8" Association="Self.FK__Order_Lin__Inven__70DDC3D8">
       <End Role="Inventory" EntitySet="Inventory" />
       <End Role="Order_Line" EntitySet="Order_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Order_Lin__InvSu__282DF8C2" Association="Self.FK__Order_Lin__InvSu__282DF8C2">
+    <AssociationSet Name="FK__Order_Lin__InvSu__6FE99F9F" Association="Self.FK__Order_Lin__InvSu__6FE99F9F">
       <End Role="Inventory_Supplier_Order" EntitySet="Inventory_Supplier_Order" />
       <End Role="Order_Line" EntitySet="Order_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Order_Lin__SuppO__2A164134" Association="Self.FK__Order_Lin__SuppO__2A164134">
+    <AssociationSet Name="FK__Order_Lin__SuppO__71D1E811" Association="Self.FK__Order_Lin__SuppO__71D1E811">
       <End Role="Order_Status" EntitySet="Order_Status" />
       <End Role="Order_Line" EntitySet="Order_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Prospecti__BookS__1920BF5C" Association="Self.FK__Prospecti__BookS__1920BF5C">
+    <AssociationSet Name="FK__Prospecti__BookS__5165187F" Association="Self.FK__Prospecti__BookS__5165187F">
       <End Role="Book_Supplier" EntitySet="Book_Supplier" />
       <End Role="Prospective_Book" EntitySet="Prospective_Book" />
     </AssociationSet>
-    <AssociationSet Name="FK__Purchase___Book___634EBE90" Association="Self.FK__Purchase___Book___634EBE90">
+    <AssociationSet Name="FK__Purchase___Book___5EBF139D" Association="Self.FK__Purchase___Book___5EBF139D">
       <End Role="Book" EntitySet="Book" />
       <End Role="Purchase_Line" EntitySet="Purchase_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Purchase___Purch__625A9A57" Association="Self.FK__Purchase___Purch__625A9A57">
+    <AssociationSet Name="FK__Purchase___Purch__5DCAEF64" Association="Self.FK__Purchase___Purch__5DCAEF64">
       <End Role="Purchase" EntitySet="Purchase" />
       <End Role="Purchase_Line" EntitySet="Purchase_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Purchase__BookSu__5F7E2DAC" Association="Self.FK__Purchase__BookSu__5F7E2DAC">
+    <AssociationSet Name="FK__Purchase__BookSu__5AEE82B9" Association="Self.FK__Purchase__BookSu__5AEE82B9">
       <End Role="Book_Supplier" EntitySet="Book_Supplier" />
       <End Role="Purchase" EntitySet="Purchase" />
     </AssociationSet>
-    <AssociationSet Name="FK__Received___InvSu__2CF2ADDF" Association="Self.FK__Received___InvSu__2CF2ADDF">
+    <AssociationSet Name="FK__Received___InvSu__74AE54BC" Association="Self.FK__Received___InvSu__74AE54BC">
       <End Role="Inventory_Supplier_Order" EntitySet="Inventory_Supplier_Order" />
       <End Role="Received_Supplier_Order" EntitySet="Received_Supplier_Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Received___InvSu__2DE6D218" Association="Self.FK__Received___InvSu__2DE6D218">
+    <AssociationSet Name="FK__Received___InvSu__75A278F5" Association="Self.FK__Received___InvSu__75A278F5">
       <End Role="Inventory_Supplier" EntitySet="Inventory_Supplier" />
       <End Role="Received_Supplier_Order" EntitySet="Received_Supplier_Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Received___SuppO__2EDAF651" Association="Self.FK__Received___SuppO__2EDAF651">
+    <AssociationSet Name="FK__Received___SuppO__76969D2E" Association="Self.FK__Received___SuppO__76969D2E">
       <End Role="Order_Status" EntitySet="Order_Status" />
       <End Role="Received_Supplier_Order" EntitySet="Received_Supplier_Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Return_Li__InvSu__3587F3E0" Association="Self.FK__Return_Li__InvSu__3587F3E0">
+    <AssociationSet Name="FK__Return_Li__InvSu__7D439ABD" Association="Self.FK__Return_Li__InvSu__7D439ABD">
       <End Role="Inventory_Supplier_Order" EntitySet="Inventory_Supplier_Order" />
       <End Role="Return_Line" EntitySet="Return_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Return_Li__Retur__3493CFA7" Association="Self.FK__Return_Li__Retur__3493CFA7">
+    <AssociationSet Name="FK__Return_Li__Retur__7C4F7684" Association="Self.FK__Return_Li__Retur__7C4F7684">
       <End Role="Return_Supplier_Order" EntitySet="Return_Supplier_Order" />
       <End Role="Return_Line" EntitySet="Return_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Return_Sa__Inven__4B7734FF" Association="Self.FK__Return_Sa__Inven__4B7734FF">
+    <AssociationSet Name="FK__Return_Sa__Inven__3E52440B" Association="Self.FK__Return_Sa__Inven__3E52440B">
       <End Role="Inventory" EntitySet="Inventory" />
       <End Role="Return_Sale" EntitySet="Return_Sale" />
     </AssociationSet>
-    <AssociationSet Name="FK__Return_Sa__Retur__793DFFAF" Association="Self.FK__Return_Sa__Retur__793DFFAF">
+    <AssociationSet Name="FK__Return_Sa__Retur__412EB0B6" Association="Self.FK__Return_Sa__Retur__412EB0B6">
       <End Role="Return_Sale" EntitySet="Return_Sale" />
       <End Role="Return_Sale_Line" EntitySet="Return_Sale_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Return_Sa__Sale___7A3223E8" Association="Self.FK__Return_Sa__Sale___7A3223E8">
+    <AssociationSet Name="FK__Return_Sa__Sale___4222D4EF" Association="Self.FK__Return_Sa__Sale___4222D4EF">
       <End Role="Sale" EntitySet="Sale" />
       <End Role="Return_Sale_Line" EntitySet="Return_Sale_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Return_Su__InvSu__31B762FC" Association="Self.FK__Return_Su__InvSu__31B762FC">
+    <AssociationSet Name="FK__Return_Su__InvSu__797309D9" Association="Self.FK__Return_Su__InvSu__797309D9">
       <End Role="Inventory_Supplier_Order" EntitySet="Inventory_Supplier_Order" />
       <End Role="Return_Supplier_Order" EntitySet="Return_Supplier_Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Sale__Customer_I__6EC0713C" Association="Self.FK__Sale__Customer_I__6EC0713C">
+    <AssociationSet Name="FK__Sale__Customer_I__33D4B598" Association="Self.FK__Sale__Customer_I__33D4B598">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="Sale" EntitySet="Sale" />
     </AssociationSet>
-    <AssociationSet Name="FK__Sale__Employee_I__70A8B9AE" Association="Self.FK__Sale__Employee_I__70A8B9AE">
+    <AssociationSet Name="FK__Sale__Employee_I__35BCFE0A" Association="Self.FK__Sale__Employee_I__35BCFE0A">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Sale" EntitySet="Sale" />
     </AssociationSet>
-    <AssociationSet Name="FK__Sale__PaymentTyp__6FB49575" Association="Self.FK__Sale__PaymentTyp__6FB49575">
+    <AssociationSet Name="FK__Sale__PaymentTyp__34C8D9D1" Association="Self.FK__Sale__PaymentTyp__34C8D9D1">
       <End Role="Payment_Type" EntitySet="Payment_Type" />
       <End Role="Sale" EntitySet="Sale" />
     </AssociationSet>
-    <AssociationSet Name="FK__Sale__TaxRate_ID__719CDDE7" Association="Self.FK__Sale__TaxRate_ID__719CDDE7">
+    <AssociationSet Name="FK__Sale__TaxRate_ID__36B12243" Association="Self.FK__Sale__TaxRate_ID__36B12243">
       <End Role="TaxRate" EntitySet="TaxRate" />
       <End Role="Sale" EntitySet="Sale" />
     </AssociationSet>
-    <AssociationSet Name="FK__Sale_Line__Custo__76619304" Association="Self.FK__Sale_Line__Custo__76619304">
+    <AssociationSet Name="FK__Sale_Line__Custo__3B75D760" Association="Self.FK__Sale_Line__Custo__3B75D760">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="Sale_Line" EntitySet="Sale_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Sale_Line__Inven__756D6ECB" Association="Self.FK__Sale_Line__Inven__756D6ECB">
+    <AssociationSet Name="FK__Sale_Line__Inven__3A81B327" Association="Self.FK__Sale_Line__Inven__3A81B327">
       <End Role="Inventory" EntitySet="Inventory" />
       <End Role="Sale_Line" EntitySet="Sale_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__Sale_Line__Sale___74794A92" Association="Self.FK__Sale_Line__Sale___74794A92">
+    <AssociationSet Name="FK__Sale_Line__Sale___398D8EEE" Association="Self.FK__Sale_Line__Sale___398D8EEE">
       <End Role="Sale" EntitySet="Sale" />
       <End Role="Sale_Line" EntitySet="Sale_Line" />
     </AssociationSet>
-    <AssociationSet Name="FK__User__UserRole_I__4BAC3F29" Association="Self.FK__User__UserRole_I__4BAC3F29">
+    <AssociationSet Name="FK__User__UserRole_I__24927208" Association="Self.FK__User__UserRole_I__24927208">
       <End Role="User_Role" EntitySet="User_Role" />
       <End Role="User" EntitySet="User" />
     </AssociationSet>
-    <AssociationSet Name="FK__Write_Off__Inven__00DF2177" Association="Self.FK__Write_Off__Inven__00DF2177">
-      <End Role="Inventory" EntitySet="Inventory" />
-      <End Role="Write_Off_Line" EntitySet="Write_Off_Line" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Write_Off__Inven__7D0E9093" Association="Self.FK__Write_Off__Inven__7D0E9093">
+    <AssociationSet Name="FK__Write_Off__Inven__44FF419A" Association="Self.FK__Write_Off__Inven__44FF419A">
       <End Role="Inventory" EntitySet="Inventory" />
       <End Role="Write_Off_Stock" EntitySet="Write_Off_Stock" />
     </AssociationSet>
-    <AssociationSet Name="FK__Write_Off__Write__7FEAFD3E" Association="Self.FK__Write_Off__Write__7FEAFD3E">
+    <AssociationSet Name="FK__Write_Off__Inven__48CFD27E" Association="Self.FK__Write_Off__Inven__48CFD27E">
+      <End Role="Inventory" EntitySet="Inventory" />
+      <End Role="Write_Off_Line" EntitySet="Write_Off_Line" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Write_Off__Write__47DBAE45" Association="Self.FK__Write_Off__Write__47DBAE45">
       <End Role="Write_Off_Stock" EntitySet="Write_Off_Stock" />
       <End Role="Write_Off_Line" EntitySet="Write_Off_Line" />
     </AssociationSet>

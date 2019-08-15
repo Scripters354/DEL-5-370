@@ -1,8 +1,6 @@
 Use Master
 CREATE DAtabase [The_Book_Market]
 
-
-
 Use [The_Book_Market]
 Go
 CREATE TABLE Inventory_Level_Status
@@ -77,10 +75,12 @@ CREATE TABLE [User]
 (
 [User_ID] int Identity (900,2) Primary Key Not Null,
 UserRole_ID int references [User_Role] (UserRole_ID) ,
-UserName varchar(30) ,
-UserPassword varchar(30),
-[GUID] varchar(30),
-GUIDExpiry DATETIME 
+UserName varchar(100) ,
+UserPassword varchar(max),
+[GUID] uniqueidentifier,
+IsUserVerified bit,
+ResetCode nvarchar(100),
+PassConfirm varchar(max)
 )
 GO
 
@@ -400,8 +400,8 @@ insert into User_Role values('Clerk')
 go
 
 ---Insert into [User]
-insert into [User] values('800','Bond','123456','jd85988465','04-05-2019')
-insert into [User] values('802','James','123456','aboiji88465','04-05-2019')
+insert into [User] values('800','Bond@gmail.com','Bond@800','B85E62C3-DC56-40C0-852A-49F759AC68FB','0','thhuuoo','Bond@800')
+insert into [User] values('802','James@gmail.com','James@802','B85E62C3-DC56-40C0-852A-49F759AC68FB','0','htygrr','James@802')
 go
 
 
@@ -410,8 +410,8 @@ insert into TaxRate values('State Product Tax','15')
 go
 
 ---Insert into Employee
-INSERT INTO Employee values('900','Marell','Vapong','78 Hatfiled Drive, Pretoria','0733267855','mvapong@mailme.com','8605459488759','205','96000','0x010203040506')
-INSERT INTO Employee values('902','Mavis','Mavresh','256 Stanza Bo Timer, Arcadia','0785565684','mavresh@mailme.com','778954256315','210','96000','0x010203040507')
+INSERT INTO Employee values('900','Marell','Vapong','78 Hatfiled Drive, Pretoria','0733267855','mvapong@mailme.com','8605459488759','205','96000','image')
+INSERT INTO Employee values('902','Mavis','Mavresh','256 Stanza Bo Timer, Arcadia','0785565684','mavresh@mailme.com','778954256315','210','96000','image')
 Go
 
 ---Insert into Customer

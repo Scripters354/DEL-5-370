@@ -349,5 +349,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Inventory_Level">
+      <EntityTypeMapping TypeName="Model.Inventory_Level">
+        <MappingFragment StoreEntitySet="Inventory_Level">
+          <ScalarProperty Name="InvLevel_Description" ColumnName="InvLevel_Description" />
+          <ScalarProperty Name="InvLevel_Status_ID" ColumnName="InvLevel_Status_ID" />
+          <ScalarProperty Name="Inventory_ID" ColumnName="Inventory_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventory_Price">
+      <EntityTypeMapping TypeName="Model.Inventory_Price">
+        <MappingFragment StoreEntitySet="Inventory_Price">
+          <ScalarProperty Name="DateActive" ColumnName="DateActive" />
+          <ScalarProperty Name="Inventory_ID" ColumnName="Inventory_ID" />
+          <ScalarProperty Name="Price_ID" ColumnName="Price_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
