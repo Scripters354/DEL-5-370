@@ -264,3 +264,6 @@ G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cac
 G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
 G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.dll
 G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
+C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\obj\Debug\THe BOok MArket.csprojResolveAssemblyReference.cache
+C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\obj\Debug\THe BOok MArket.dll
+C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
