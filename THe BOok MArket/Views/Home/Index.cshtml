@@ -7,15 +7,16 @@ Welcome @HttpContext.Current.User.Identity.Name
 
 @if (Request.IsAuthenticated)
 {
+    <li>@Html.ActionLink("Forgot Password", "ForgotPassword", "UsersAuth")</li>
+    <li>@Html.ActionLink("Account", "Register", "UsersAuth")</li>
+    <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+    <li>@Html.ActionLink("Supplier", "Index", "Inventory_Supplier")</li>
+    <li>@Html.ActionLink("User Roles", "Index", "UserRole")</li>
 
     using (Html.BeginForm("Logout", "UsersAuth", FormMethod.Post, new { id = "logoutForm" }))
     {
         <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
-        <li>@Html.ActionLink("Forgot Password", "ForgotPassword", "UsersAuth")</li>
-        <li>@Html.ActionLink("Account", "Register", "UsersAuth")</li>
-        <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
-        <li>@Html.ActionLink("Supplier", "Index", "Inventory_Supplier")</li>
-        <li>@Html.ActionLink("User Roles", "Index", "UserRole")</li>
+
     }
 
 
@@ -23,3 +24,14 @@ Welcome @HttpContext.Current.User.Identity.Name
 }
 
 
+<script>
+    //session end 
+    var sessionTimeoutWarning = @Session.Timeout- 1;
+
+    var sTimeout = parseInt(sessionTimeoutWarning) * 60 * 1000;
+    setTimeout('SessionEnd()', sTimeout);
+
+    function SessionEnd() {
+        window.location = "/UsersAuth/Logoff";
+    }
+</script>

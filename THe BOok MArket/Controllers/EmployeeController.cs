@@ -61,28 +61,21 @@ namespace THe_BOok_MArket.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    string fileName = Path.GetFileNameWithoutExtension(employee.ImageFile.FileName);
-                    string extension = Path.GetExtension(employee.ImageFile.FileName);
-                    fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                    employee.ImageData = "~/Image/" + fileName;
-                    fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
-                    employee.ImageFile.SaveAs(fileName);
+                string fileName = Path.GetFileNameWithoutExtension(employee.ImageFile.FileName);
+                string extension = Path.GetExtension(employee.ImageFile.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                employee.ImageData = "~/Image/" + fileName;
+                fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
+                employee.ImageFile.SaveAs(fileName);
 
 
-                    using (The_Book_MarketEntities db = new The_Book_MarketEntities())
+                using (The_Book_MarketEntities db = new The_Book_MarketEntities())
                     {
                         db.Employees.Add(employee);
                         db.SaveChanges();
                     }
                     ViewBag.FileStatus = "Employee Added successfully.";
-                }
-                catch (Exception)
-                {
-
-                    ViewBag.FileStatus = "Error while file uploading.";
-                }
+              
 
                 return RedirectToAction("Index");
             }

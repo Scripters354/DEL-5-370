@@ -156,6 +156,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Inventory_SupplierController.cs" />
+    <Compile Include="Controllers\ProfilePicController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Controllers\UsersAuthController.cs" />
     <Compile Include="EncryptPassword.cs" />
@@ -501,6 +502,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Image\" />
+    <Folder Include="Views\ProfilePic\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

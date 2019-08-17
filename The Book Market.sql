@@ -110,7 +110,7 @@ Emp_Email varchar(30),
 ID_Number bigint,
 EmpTitle_ID int references Employee_Title (EmpTitle_ID),
 EmpGender_ID int references Employee_Gender (EmpGender_ID),
-ImageData image
+ImageData varchar(max)
 )
 GO
 

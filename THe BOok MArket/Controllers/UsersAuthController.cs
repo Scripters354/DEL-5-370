@@ -170,6 +170,14 @@ namespace THe_BOok_MArket.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Login", "UsersAuth");
         }
+        public ActionResult LogOff()
+        {
+            Session["User"] = null; //it's my session variable
+            Session.Clear();
+            Session.Abandon();
+            FormsAuthentication.SignOut(); //you write this when you use FormsAuthentication
+            return RedirectToAction("Login", "UsersAuth");
+        }
 
         //Forgot Password
         [HttpGet]
@@ -178,11 +186,9 @@ namespace THe_BOok_MArket.Controllers
             return View();
         }
 
+
         [HttpPost]
-
-       
-
-        public ActionResult ForgotPassword(string UserName)
+        public ActionResult ForgotPassword(string userName)
         {
             //Verify Email ID
             //Generate Reset password link 
@@ -192,28 +198,50 @@ namespace THe_BOok_MArket.Controllers
 
             using (The_Book_MarketEntities dc = new The_Book_MarketEntities())
             {
-                var account = dc.Users.Where(a =>a.UserName == UserName).FirstOrDefault();
-                
-                    if (account.UserName ==UserName)
+                var account = dc.Users.Where(a =>a.UserName == userName).FirstOrDefault();
+
+                try
+                {
+                    if (account != null)
                     {
                         //Send email for reset password
                         string resetCode = Guid.NewGuid().ToString();
-                        SendVerificationLinkEmail(account.UserPassword, resetCode, "ResetPassword");
+                        SendResetPasswordLinkEmail(account.UserName, resetCode);
+                        //SendVerificationLinkEmail(account.UserName, resetCode);
                         account.ResetCode = resetCode;
                         // added to avoid confirm password area in model
                         dc.Configuration.ValidateOnSaveEnabled = false;
                         dc.SaveChanges();
                         message = "Reset password link has been sent to your email id.";
                     }
-                
-                
-                else
+                   
+
+                    else
+                    {
+                        message = "Account not found";
+                    }
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
                 {
-                    message = "Account not found";
+                    Exception raise = dbEx;
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            string Message = string.Format("{0}:{1}",
+                                validationErrors.Entry.Entity.ToString(),
+                                validationError.ErrorMessage);
+                            // raise a new exception nesting  
+                            // the current instance as InnerException  
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
                 }
             }
             ViewBag.Message = message;
             return View();
+            
         }
 
 
@@ -286,15 +314,15 @@ namespace THe_BOok_MArket.Controllers
             }
         }
 
-
-        public void SendVerificationLinkEmail(string UserName, string activationCode, string emailFor = "VerifyAccount")
+        [NonAction]
+        public void SendVerificationLinkEmail(string userName, string activationCode, string emailFor = "VerifyAccount")
         {
             var verifyUrl = "/UsersAuth/" + emailFor + "/" + activationCode;
             var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
             var fromEmail = new MailAddress("Scripters.inf370@gmail.com", "Scripters System"); //Valid Email
-            var toEmail = new MailAddress(UserName);
-            var fromEmailPassword = "SCRIPTERs370"; //  actual password associated with the email
+            var toEmail = new MailAddress(userName);
+            var fromEmailPassword = "SCRIPTERs370";
 
             string subject = "";
             string body = "";
@@ -331,6 +359,58 @@ namespace THe_BOok_MArket.Controllers
             })
                 smtp.Send(message);
         }
+
+        [NonAction]
+        public void SendResetPasswordLinkEmail(String username, string resetcode)
+        {
+            try {
+                var verifyurl = "/UsersAuth/ResetPassword/" + resetcode;
+                var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyurl);
+
+                var fromEmail = new MailAddress("Scripters.inf370@gmail.com", "The Book Market");
+                var toEmail = new MailAddress(username);
+                var fromEmailPassword = "SCRIPTERs370";
+                string subject = "Account Reset Password";
+                string body = body = "Hi,<br/><br/>We got request for reset your account password. Please click on the below link to reset your password" +
+                        "<br/><br/><a href=" + link + ">Reset Password link</a>";
+
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 25,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(fromEmail.Address, fromEmailPassword)
+                };
+
+                using (var message = new MailMessage(fromEmail, toEmail)
+                {
+                    Subject = subject,
+                    Body = body,
+                    IsBodyHtml = true
+                })
+                    smtp.Send(message);
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting  
+                        // the current instance as InnerException  
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
+        }
+         
 
     }
 }
