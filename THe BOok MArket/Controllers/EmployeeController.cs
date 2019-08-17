@@ -61,12 +61,23 @@ namespace THe_BOok_MArket.Controllers
 
             if (ModelState.IsValid)
             {
+<<<<<<< HEAD
                 string fileName = Path.GetFileNameWithoutExtension(employee.ImageFile.FileName);
                 string extension = Path.GetExtension(employee.ImageFile.FileName);
                 fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
                 employee.ImageData = "~/Image/" + fileName;
                 fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
                 employee.ImageFile.SaveAs(fileName);
+=======
+                try
+                {
+                    //string fileName = Path.GetFileNameWithoutExtension(employee.ImageFile.FileName);
+                    //string extension = Path.GetExtension(employee.ImageFile.FileName);
+                    //fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                    //employee.ImageData = "~/Image/" + fileName;
+                    //fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
+                    //employee.ImageFile.SaveAs(fileName);
+>>>>>>> aa0cc14a1092b662d2cbea0ead113a0d069e0ea1
 
 
                 using (The_Book_MarketEntities db = new The_Book_MarketEntities())
