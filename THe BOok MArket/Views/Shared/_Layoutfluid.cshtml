@@ -32,7 +32,7 @@
     @RenderSection("Styles", false)
     <!-- Favicon-->
     <link rel="shortcut icon" href="~/img/favicon.ico">
-    
+
 
 </head>
 <body>
@@ -42,191 +42,227 @@
         <header class="header">
             <nav class="navbar">
 
-            
+                
                 <div class="container-fluid">
                     <div class="navbar-holder d-flex align-items-center justify-content-between">
                         <!-- Navbar Header-->
                         <div class="navbar-header">
-                            <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                                <div class="brand-text d-none d-lg-inline-block"><span>The </span><strong>Bookmarket</strong></div>
+                            <!-- Navbar Brand --><a href="#" class="navbar-brand d-none d-sm-inline-block">
+                                <div class="brand-text d-none d-lg-inline-block"><span>The</span><strong>Bookmarket</strong></div>
                                 <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
                             </a>
                             <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                         </div>
                         <!-- Navbar Menu -->
+
+
                         <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                             <!-- Search-->
-                            <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
-                                                        
+                            <!----<li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>-->
                             <!-- Logout    -->
-                            <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
+
+                            @if (Request.IsAuthenticated)
+                            {
+                                using (Html.BeginForm("Logout", "UsersAuth", FormMethod.Post, new { id = "logoutForm" }))
+                                {
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+
+                                }
+                            }
+
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
 
+        @if (Request.IsAuthenticated)
+        {
 
-        <div class="page-content d-flex align-items-stretch">
-            <!-- Side Navbar -->
-            <nav class="side-navbar">
-                <!-- Sidebar Header-->
-                <div class="sidebar-header d-flex align-items-center">
-                    <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                    <div class="title"> 
-                        <h1 class="h4"> UserName</h1>
-                        <p>Employee Type</p>
+
+
+
+            <div class="page-content d-flex align-items-stretch">
+                <!-- Side Navbar -->
+                <nav class="side-navbar">
+                    <!-- Sidebar Header-->
+                    <div class="sidebar-header d-flex align-items-center">
+                       <!---- <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div> -->
+                        <div class="title">
+                            <h1>@Html.ActionLink("Profile", "ForgotPassword", "UsersAuth")</h1>
+                            <h1 class="h4">@HttpContext.Current.User.Identity.Name.Substring(0, 7)</h1>
+                            <!--<p>Employee Type</p>-->
+                        </div>
                     </div>
-                </div>
-                <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
-                <ul class="list-unstyled">
-                                        
-                    <!-- Customer drowpdown-->
-                 <li>
-                      <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-picture"></i>Customers </a>
-                      <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                          <li><a href="#">Add Customers</a></li>
-                          <li><a href="#">Maintain Customers</a></li>
-                          <li><a href="#">Search Customers</a></li>
-                      </ul>
-                  </li>
-                   <!-- Employee drowpdown-->
-                  <li>
-                        <a href="#employeedropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-screen"></i>Employees </a>
-                        <ul id="employeedropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Add Employee</a></li>
-                            <li><a href="#">Maintain Employee</a></li>
-                            <li><a href="#">Maintain User Role</a></li>
-                        </ul>
-                    </li>
+                    <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+                                                    <ul class="list-unstyled">
 
-                    <!-- Supplier drowpdown-->
-                    <li>
-                        <a href="#suplplierdropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-flask"></i>Suppliers </a>
-                        <ul id="suplplierdropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Add Supplier</a></li>
-                            <li><a href="#">Maintain Supplier</a></li>
-                            <li><a href="#">Search Supplier</a></li>
-                            <li><a href="#">Place Supplier Order</a></li>
-                            <li><a href="#">Search Supplier Order</a></li>
-                            <li><a href="#">Cancel Supplier Order</a></li>
-                            <li><a href="#">Receive Supplier Order</a></li>
-                            <li><a href="#">Return Supplier Order</a></li>
-                        </ul>
-                    </li>
 
-                    <!-- Sales drowpdown-->
-                    <li>
-                        <a href="#salesdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Sales </a>
-                        <ul id="salesdropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Make Sale</a></li>
-                            <li><a href="#">Search Sale</a></li>
-                            <li><a href="#">Return Sale</a></li>
-                        </ul>
-                    </li>
+                                                        <!-- Sales drowpdown-->
+                                                        <li>
+                                                            <a href="#salesdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Sales </a>
+                                                            <ul id="salesdropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Make Sale</a></li>
+                                                                <li><a href="#">Search Sale</a></li>
+                                                                <li><a href="#">Return Sale</a></li>
+                                                            </ul>
+                                                        </li>
 
-                    <!-- Payemtn Type drowpdown-->
-                    <li>
-                        <a href="#ptypedropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="far fa-credit-card"></i>Payment Types </a>
-                        <ul id="ptypedropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Add Payment Type</a></li>
-                            <li><a href="#">Maintain Payment Type</a></li>
-                            <li><a href="#">Search Payment Type</a></li>
-                        </ul>
-                    </li>
+                                                        <!-- Prosepctive drowpdown-->
+                                                        <li>
+                                                            <a href="#prospectivedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Prospective Books </a>
+                                                            <ul id="prospectivedropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Add Prosepctive Books</a></li>
+                                                                <li><a href="#">Maintain Prosepctive Books</a></li>
+                                                                <li><a href="#">Search Prosepctive Books</a></li>
+                                                                <li><a href="#">Cancel Prosepctive Books</a></li>
+                                                            </ul>
+                                                        </li>
 
-                    <!-- Inventory drowpdown-->
-                    <li>
-                        <a href="#inventorydropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Prospective </a>
-                        <ul id="inventorydropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Add Inventory</a></li>
-                            <li><a href="#">Maintain Inventory</a></li>
-                            <li><a href="#">Write-off Inventory</a></li>
-                            <li><a href="#">Stock Take</a></li>
-                        </ul>
-                    </li>
+                                                        <!-- Book Request drowpdown-->
+                                                        <li>
+                                                            <a href="#bookRequestdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Book Requests </a>
+                                                            <ul id="bookRequestdropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Add Book Request</a></li>
+                                                                <li><a href="#">Maintain Book Request</a></li>
+                                                                <li><a href="#">Search Book Request</a></li>
+                                                                <li><a href="#">Cancel Book Request</a></li>
+                                                            </ul>
+                                                        </li>
 
-                    <!-- Prosepctive drowpdown-->
-                    <li>
-                        <a href="#prospectivedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Prospective </a>
-                        <ul id="prospectivedropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Add Prosepctive Books</a></li>
-                            <li><a href="#">Maintain Prosepctive Books</a></li>
-                            <li><a href="#">Search Prosepctive Books</a></li>
-                            <li><a href="#">Cancel Prosepctive Books</a></li>
-                        </ul>
-                    </li>
 
-                    <!-- Purchase drowpdown-->
-                    <li>
-                        <a href="#purchasedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Purchase </a>
-                        <ul id="purchasedropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Make Purchase</a></li>
-                            <li><a href="#">Cancel Purchase</a></li>
-                           
-                        </ul>
-                    </li>
+                                                        <!-- Customer drowpdown-->
 
-                    <!-- Book Request drowpdown-->
-                    <li>
-                        <a href="#bookRequestdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Prospective </a>
-                        <ul id="bookRequestdropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Add Book Request</a></li>
-                            <li><a href="#">Maintain Book Request</a></li>
-                            <li><a href="#">Search Book Request</a></li>
-                            <li><a href="#">Cancel Book Request</a></li>
-                        </ul>
-                    </li>
-                   
+                                                        <li>
+                                                            <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-picture"></i>Customers </a>
+                                                            <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Add Customers</a></li>
+                                                                <li><a href="#">Maintain Customers</a></li>
+                                                                <li><a href="#">Search Customers</a></li>
+                                                            </ul>
+                                                        </li>
 
-                    <!-- Inventory Type drowpdown-->
-                    <li>
-                        <a href="#inventoryTypedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Prospective </a>
-                        <ul id="inventoryTypedropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Add Inventory Type</a></li>
-                            <li><a href="#">Maintain Inventory Type</a></li>
-                            <li><a href="#">Search Inventory Type</a></li>
-                        </ul>
-                    </li>
+                                                        <!-- Employee drowpdown-->
+                                                        @if (User.IsInRole("800"))
+                                                        {
 
-                    <!-- Reporting drowpdown-->
-                    <li>
-                        <a href="#reportingdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Prospective </a>
-                        <ul id="reportingdropdownDropdown" class="collapse list-unstyled ">
-                            <li><a href="#">Sales Report</a></li>
-                            <li><a href="#">Supplier Performance Report</a></li>
-                            <li><a href="#">Supplier Orders</a></li>
-                            <li><a href="#">Inventory Report</a></li>
-                        </ul>
-                    </li>
-                
-                
-                 <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
-                </ul><span class="heading">Extras</span>
-                <ul class="list-unstyled">
-                    <li> <a href="#"> <i class="icon-flask"></i>Demo </a></li>
-                    <li> <a href="#"> <i class="icon-screen"></i>Demo </a></li>
-                    <li> <a href="#"> <i class="icon-mail"></i>Demo </a></li>
-                    <li> <a href="#"> <i class="icon-picture"></i>Demo </a></li>
-                </ul>
-            </nav>
+                                                            <li>
+                                                                <a href="#employeedropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-screen"></i>Employees </a>
+                                                                <ul id="employeedropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li>@Html.ActionLink("Add Employee", "Create", "Employee")</li>
+                                                                    <li>@Html.ActionLink("Maintain Employee", "Index", "Employee")</li>
+                                                                    <li>@Html.ActionLink("Search Employee", "Index", "Employee")</li>
+                                                                    <li>@Html.ActionLink("Manage Roles", "Index", "UserRole")</li>
+                                                                    <li>@Html.ActionLink("User Authentication", "Register", "UsersAuth")</li>
+                                                                    <li>@Html.ActionLink("Password Reset", "ForgotPassword", "UsersAuth")</li>
 
-            <!-- The Inner page/body outside of the sidebar nav ##AtRender Body-->
-            <div class="content-inner">
-                @RenderBody();
-            </div> 
-            <br /><br /><br />
+                                                                    <li><a href="#">Maintain User Role</a></li>
+                                                                    <li>@Html.ActionLink("Account", "Register", "UsersAuth")</li>
+                                                                </ul>
+                                                            </li>
 
-        
-  </div>
 
-</div>
-    
+                                                            <!-- Purchase drowpdown-->
+                                                            <li>
+                                                                <a href="#purchasedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Purchase </a>
+                                                                <ul id="purchasedropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li><a href="#">Make Purchase</a></li>
+                                                                    <li><a href="#">Cancel Purchase</a></li>
+
+                                                                </ul>
+                                                            </li>
+
+                                                            <!-- Supplier drowpdown-->
+                                                            <li>
+                                                                <a href="#suplplierdropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-flask"></i>Suppliers </a>
+                                                                <ul id="suplplierdropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li><a href="#">Add Supplier</a></li>
+                                                                    <li><a href="#">Maintain Supplier</a></li>
+                                                                    <li><a href="#">Search Supplier</a></li>
+                                                                    <li><a href="#">Place Supplier Order</a></li>
+                                                                    <li><a href="#">Search Supplier Order</a></li>
+                                                                    <li><a href="#">Cancel Supplier Order</a></li>
+                                                                    <li><a href="#">Receive Supplier Order</a></li>
+                                                                    <li><a href="#">Return Supplier Order</a></li>
+                                                                </ul>
+                                                            </li>
+
+
+
+                                                        <!-- Payemtn Type drowpdown-->
+                                                        <li>
+                                                            <a href="#ptypedropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="far fa-credit-card"></i>Payment Types </a>
+                                                            <ul id="ptypedropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Add Payment Type</a></li>
+                                                                <li><a href="#">Maintain Payment Type</a></li>
+                                                                <li><a href="#">Search Payment Type</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- Inventory drowpdown-->
+                                                        <li>
+                                                            <a href="#inventorydropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Inventory </a>
+                                                            <ul id="inventorydropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Add Inventory</a></li>
+                                                                <li><a href="#">Maintain Inventory</a></li>
+                                                                <li><a href="#">Write-off Inventory</a></li>
+                                                                <li><a href="#">Stock Take</a></li>
+                                                            </ul>
+                                                        </li>
+
+
+
+                                                        <!-- Inventory Type drowpdown-->
+                                                        <li>
+                                                            <a href="#inventoryTypedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Inventory Type </a>
+                                                            <ul id="inventoryTypedropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Add Inventory Type</a></li>
+                                                                <li><a href="#">Maintain Inventory Type</a></li>
+                                                                <li><a href="#">Search Inventory Type</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- Reporting drowpdown-->
+                                                        <li>
+                                                            <a href="#reportingdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Reporting </a>
+                                                            <ul id="reportingdropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Sales Report</a></li>
+                                                                <li><a href="#">Supplier Performance Report</a></li>
+                                                                <li><a href="#">Supplier Orders</a></li>
+                                                                <li><a href="#">Inventory Report</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        }
+
+                                                        <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
+                                                    </ul><span class="heading">Extras</span>
+                    <ul class="list-unstyled">
+                        <li> <a href="#"> <i class="icon-flask"></i>Demo </a></li>
+                        <li> <a href="#"> <i class="icon-screen"></i>Demo </a></li>
+                        <li> <a href="#"> <i class="icon-mail"></i>Demo </a></li>
+                        <li> <a href="#"> <i class="icon-picture"></i>Demo </a></li>
+                    </ul>
+                </nav>
+
+                <!-- The Inner page/body outside of the sidebar nav ##AtRender Body-->
+
+                <br /><br /><br />
+
+
+            </div>
+        }
+
+    </div>
+    <div class="content-inner">
+        @RenderBody();
+
+    </div>
+
     <!-- JavaScript files-->
     <script src="~/vendor/jquery/jquery.min.js"></script>
-    <script src="~/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="~/vendor/popper.js/umd/popper.min.js"></script>
     <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="~/vendor/jquery.cookie/jquery.cookie.js"></script>
     <script src="~/vendor/chart.js/Chart.min.js"></script>
     <script src="~/vendor/jquery-validation/jquery.validate.min.js"></script>
     <!-- Main File-->
@@ -234,3 +270,15 @@
 </body>
 </html>
 
+
+<script>
+    //session end
+    var sessionTimeoutWarning = @Session.Timeout- 1;
+
+    var sTimeout = parseInt(sessionTimeoutWarning) * 60 * 1000;
+    setTimeout('SessionEnd()', sTimeout);
+
+    function SessionEnd() {
+        window.location = "/UsersAuth/Logoff";
+    }
+</script>

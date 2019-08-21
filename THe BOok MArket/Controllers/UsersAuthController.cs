@@ -11,9 +11,11 @@ using THe_BOok_MArket.Models;
 
 namespace THe_BOok_MArket.Controllers
 {
+    [AllowAnonymous]
     public class UsersAuthController : Controller
     {
         private The_Book_MarketEntities db = new The_Book_MarketEntities();
+        [Authorize(Roles = "800")]
         [HttpGet]
         // GET: UsersAuth
         public ActionResult Register()

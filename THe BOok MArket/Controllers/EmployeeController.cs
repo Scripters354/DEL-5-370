@@ -13,7 +13,7 @@ using THe_BOok_MArket.Models;
 
 namespace THe_BOok_MArket.Controllers
 {
-   
+    [Authorize(Roles = "800")]
     public class EmployeeController : Controller
     {
         private The_Book_MarketEntities db = new The_Book_MarketEntities();
@@ -57,46 +57,32 @@ namespace THe_BOok_MArket.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Employee_ID,User_ID,Employee_Name,Employee_Surname,Employee_Address,Emp_Phone,Emp_Email,ID_Number,EmpTitle_ID,EmpGender_ID,ImageData")] Employee employee)
         {
-           
+
 
             if (ModelState.IsValid)
             {
-<<<<<<< HEAD
                 string fileName = Path.GetFileNameWithoutExtension(employee.ImageFile.FileName);
                 string extension = Path.GetExtension(employee.ImageFile.FileName);
                 fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
                 employee.ImageData = "~/Image/" + fileName;
                 fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
                 employee.ImageFile.SaveAs(fileName);
-=======
-                try
-                {
-                    //string fileName = Path.GetFileNameWithoutExtension(employee.ImageFile.FileName);
-                    //string extension = Path.GetExtension(employee.ImageFile.FileName);
-                    //fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                    //employee.ImageData = "~/Image/" + fileName;
-                    //fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
-                    //employee.ImageFile.SaveAs(fileName);
->>>>>>> aa0cc14a1092b662d2cbea0ead113a0d069e0ea1
 
 
                 using (The_Book_MarketEntities db = new The_Book_MarketEntities())
-                    {
-                        db.Employees.Add(employee);
-                        db.SaveChanges();
-                    }
-                    ViewBag.FileStatus = "Employee Added successfully.";
-              
+                {
+                    db.Employees.Add(employee);
+                    db.SaveChanges();
+                }
+                ViewBag.FileStatus = "Employee Added successfully.";
+
 
                 return RedirectToAction("Index");
             }
-            
-
             ViewBag.EmpGender_ID = new SelectList(db.Employee_Gender, "EmpGender_ID", "Gender_Description", employee.EmpGender_ID);
             ViewBag.EmpTitle_ID = new SelectList(db.Employee_Title, "EmpTitle_ID", "Title_Description", employee.EmpTitle_ID);
             ViewBag.User_ID = new SelectList(db.Users, "User_ID", "UserName", employee.User_ID);
             return View(employee);
-
         }
   
 

@@ -10,6 +10,7 @@ using THe_BOok_MArket.Models;
 
 namespace THe_BOok_MArket.Controllers
 {
+    [Authorize(Roles = "800,804")]
     public class Inventory_SupplierController : Controller
     {
         private The_Book_MarketEntities db = new The_Book_MarketEntities();

@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Edit";
-   
+
 }
 
 <h2>Edit</h2>
@@ -11,14 +11,14 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Employee_ID)
 
-        
+
         <div class="form-group">
             @Html.LabelFor(model => model.Employee_Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -103,5 +103,5 @@
 </div>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        @Scripts.Render("~/bundles/jqueryval")
+    }

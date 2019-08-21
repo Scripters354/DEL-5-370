@@ -1,523 +1,172 @@
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\THe BOok MArket.dll.config
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\THe BOok MArket.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\THe BOok MArket.pdb
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\csc.exe
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\csc.exe.config
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\csc.rsp
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\csi.exe
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\csi.exe.config
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\csi.rsp
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.AppContext.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Console.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.IO.Compression.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.IO.Pipes.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Security.Claims.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\vbc.exe
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\vbc.exe.config
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\vbc.rsp
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\Antlr3.Runtime.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\Newtonsoft.Json.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Helpers.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Mvc.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Optimization.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Razor.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.WebPages.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\WebGrease.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Helpers.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Mvc.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Optimization.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.Razor.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.WebPages.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\Newtonsoft.Json.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\Antlr3.Runtime.pdb
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\EntityFramework.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\EntityFramework.xml
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\EntityFramework.SqlServer.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 567\THe BOok MArket\THe BOok MArket\bin\EntityFramework.SqlServer.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\THe BOok MArket.dll.config
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\THe BOok MArket.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\THe BOok MArket.pdb
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\csc.exe
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\csc.exe.config
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\csc.rsp
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\csi.exe
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\csi.exe.config
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\csi.rsp
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.AppContext.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Console.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.IO.Compression.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\vbc.exe
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\vbc.exe.config
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\vbc.rsp
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Antlr3.Runtime.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\EntityFramework.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\EntityFramework.SqlServer.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Newtonsoft.Json.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Helpers.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Mvc.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Optimization.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Razor.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.WebPages.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\WebGrease.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\EntityFramework.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\EntityFramework.SqlServer.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Helpers.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Mvc.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Optimization.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.Razor.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.WebPages.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Newtonsoft.Json.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Antlr3.Runtime.pdb
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
-C:\Users\user\Documents\INF370\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
-C:\Users\user\Documents\INF370\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
-C:\Users\user\Documents\INF370\System\THe BOok MArket\obj\Debug\THe BOok MArket.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Net.Http.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Net.Sockets.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Dapper.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Microsoft.IdentityModel.Logging.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Microsoft.IdentityModel.Tokens.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\QRCoder.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\System.Drawing.Common.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\zxing.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\zxing.presentation.dll
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Dapper.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Microsoft.IdentityModel.Logging.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\Microsoft.IdentityModel.Tokens.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\zxing.pdb
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\zxing.xml
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\zxing.presentation.pdb
-C:\Users\user\Documents\INF370\System\THe BOok MArket\bin\zxing.presentation.xml
-E:\System\THe BOok MArket\obj\Debug\THe BOok MArket.csprojResolveAssemblyReference.cache
-E:\System\THe BOok MArket\obj\Debug\THe BOok MArket.dll
-E:\System\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
-G:\System\THe BOok MArket\bin\THe BOok MArket.dll.config
-G:\System\THe BOok MArket\bin\THe BOok MArket.dll
-G:\System\THe BOok MArket\bin\THe BOok MArket.pdb
-G:\System\THe BOok MArket\bin\roslyn\csc.exe
-G:\System\THe BOok MArket\bin\roslyn\csc.exe.config
-G:\System\THe BOok MArket\bin\roslyn\csc.rsp
-G:\System\THe BOok MArket\bin\roslyn\csi.exe
-G:\System\THe BOok MArket\bin\roslyn\csi.exe.config
-G:\System\THe BOok MArket\bin\roslyn\csi.rsp
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
-G:\System\THe BOok MArket\bin\roslyn\Microsoft.Win32.Primitives.dll
-G:\System\THe BOok MArket\bin\roslyn\System.AppContext.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Console.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Globalization.Calendars.dll
-G:\System\THe BOok MArket\bin\roslyn\System.IO.Compression.ZipFile.dll
-G:\System\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
-G:\System\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Net.Http.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Net.Sockets.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Threading.Tasks.Extensions.dll
-G:\System\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
-G:\System\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
-G:\System\THe BOok MArket\bin\roslyn\vbc.exe
-G:\System\THe BOok MArket\bin\roslyn\vbc.exe.config
-G:\System\THe BOok MArket\bin\roslyn\vbc.rsp
-G:\System\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
-G:\System\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
-G:\System\THe BOok MArket\bin\Antlr3.Runtime.dll
-G:\System\THe BOok MArket\bin\Dapper.dll
-G:\System\THe BOok MArket\bin\EntityFramework.dll
-G:\System\THe BOok MArket\bin\EntityFramework.SqlServer.dll
-G:\System\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-G:\System\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
-G:\System\THe BOok MArket\bin\Newtonsoft.Json.dll
-G:\System\THe BOok MArket\bin\QRCoder.dll
-G:\System\THe BOok MArket\bin\System.Drawing.Common.dll
-G:\System\THe BOok MArket\bin\System.Web.Helpers.dll
-G:\System\THe BOok MArket\bin\System.Web.Mvc.dll
-G:\System\THe BOok MArket\bin\System.Web.Optimization.dll
-G:\System\THe BOok MArket\bin\System.Web.Razor.dll
-G:\System\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
-G:\System\THe BOok MArket\bin\System.Web.WebPages.dll
-G:\System\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
-G:\System\THe BOok MArket\bin\WebGrease.dll
-G:\System\THe BOok MArket\bin\Dapper.xml
-G:\System\THe BOok MArket\bin\EntityFramework.xml
-G:\System\THe BOok MArket\bin\EntityFramework.SqlServer.xml
-G:\System\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-G:\System\THe BOok MArket\bin\Newtonsoft.Json.xml
-G:\System\THe BOok MArket\bin\System.Web.Helpers.xml
-G:\System\THe BOok MArket\bin\System.Web.Mvc.xml
-G:\System\THe BOok MArket\bin\System.Web.Optimization.xml
-G:\System\THe BOok MArket\bin\System.Web.Razor.xml
-G:\System\THe BOok MArket\bin\System.Web.WebPages.xml
-G:\System\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
-G:\System\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
-G:\System\THe BOok MArket\bin\Antlr3.Runtime.pdb
-G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
-G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
-G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
-G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.dll
-G:\System\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
-<<<<<<< HEAD
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\THe BOok MArket.dll.config
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\THe BOok MArket.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\THe BOok MArket.pdb
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\csc.exe
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\csc.exe.config
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\csc.rsp
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\csi.exe
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\csi.exe.config
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\csi.rsp
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.AppContext.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Console.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Net.Http.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Net.Sockets.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\vbc.exe
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\vbc.exe.config
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\vbc.rsp
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Antlr3.Runtime.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Dapper.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\EntityFramework.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\EntityFramework.SqlServer.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Newtonsoft.Json.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\QRCoder.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Drawing.Common.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Helpers.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Mvc.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Optimization.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Razor.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.WebPages.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\WebGrease.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Dapper.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\EntityFramework.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\EntityFramework.SqlServer.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Newtonsoft.Json.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Helpers.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Mvc.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Optimization.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.Razor.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.WebPages.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\bin\Antlr3.Runtime.pdb
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\obj\Debug\THe BOok MArket.dll
-C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\System\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
-=======
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\obj\Debug\THe BOok MArket.csprojResolveAssemblyReference.cache
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\obj\Debug\THe BOok MArket.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\THe BOok MArket.dll.config
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\THe BOok MArket.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\THe BOok MArket.pdb
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\csc.exe
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\csc.exe.config
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\csc.rsp
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\csi.exe
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\csi.exe.config
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\csi.rsp
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.AppContext.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Console.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Net.Http.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Net.Sockets.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\vbc.exe
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\vbc.exe.config
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\vbc.rsp
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Antlr3.Runtime.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Dapper.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\EntityFramework.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\EntityFramework.SqlServer.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Newtonsoft.Json.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\QRCoder.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Drawing.Common.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Helpers.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Mvc.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Optimization.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Razor.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.WebPages.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\WebGrease.dll
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Dapper.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\EntityFramework.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\EntityFramework.SqlServer.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Newtonsoft.Json.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Helpers.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Mvc.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Optimization.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.Razor.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.WebPages.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
-C:\Users\u16302606\Documents\BMarrt\THe BOok MArket\bin\Antlr3.Runtime.pdb
-C:\Users\User\Documents\BMARKET\THe BOok MArket\obj\Debug\THe BOok MArket.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\BMARKET\THe BOok MArket\obj\Debug\THe BOok MArket.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\THe BOok MArket.dll.config
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\THe BOok MArket.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\THe BOok MArket.pdb
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\csc.exe
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\csc.exe.config
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\csc.rsp
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\csi.exe
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\csi.exe.config
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\csi.rsp
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.AppContext.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Console.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Net.Http.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Net.Sockets.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\vbc.exe
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\vbc.exe.config
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\vbc.rsp
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Antlr3.Runtime.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Dapper.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\EntityFramework.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\EntityFramework.SqlServer.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Newtonsoft.Json.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\QRCoder.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Drawing.Common.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Helpers.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Mvc.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Optimization.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Razor.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.WebPages.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\WebGrease.dll
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Dapper.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\EntityFramework.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\EntityFramework.SqlServer.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Newtonsoft.Json.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Helpers.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Mvc.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Optimization.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.Razor.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.WebPages.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
-C:\Users\User\Documents\BMARKET\THe BOok MArket\bin\Antlr3.Runtime.pdb
->>>>>>> aa0cc14a1092b662d2cbea0ead113a0d069e0ea1
+G:\370Code\THe BOok MArket\bin\THe BOok MArket.dll.config
+G:\370Code\THe BOok MArket\bin\THe BOok MArket.dll
+G:\370Code\THe BOok MArket\bin\THe BOok MArket.pdb
+G:\370Code\THe BOok MArket\bin\roslyn\csc.exe
+G:\370Code\THe BOok MArket\bin\roslyn\csc.exe.config
+G:\370Code\THe BOok MArket\bin\roslyn\csc.rsp
+G:\370Code\THe BOok MArket\bin\roslyn\csi.exe
+G:\370Code\THe BOok MArket\bin\roslyn\csi.exe.config
+G:\370Code\THe BOok MArket\bin\roslyn\csi.rsp
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\370Code\THe BOok MArket\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.AppContext.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Console.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Globalization.Calendars.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Net.Http.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Net.Sockets.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
+G:\370Code\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\370Code\THe BOok MArket\bin\roslyn\vbc.exe
+G:\370Code\THe BOok MArket\bin\roslyn\vbc.exe.config
+G:\370Code\THe BOok MArket\bin\roslyn\vbc.rsp
+G:\370Code\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
+G:\370Code\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
+G:\370Code\THe BOok MArket\bin\Antlr3.Runtime.dll
+G:\370Code\THe BOok MArket\bin\Dapper.dll
+G:\370Code\THe BOok MArket\bin\EntityFramework.dll
+G:\370Code\THe BOok MArket\bin\EntityFramework.SqlServer.dll
+G:\370Code\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\370Code\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
+G:\370Code\THe BOok MArket\bin\Newtonsoft.Json.dll
+G:\370Code\THe BOok MArket\bin\QRCoder.dll
+G:\370Code\THe BOok MArket\bin\System.Drawing.Common.dll
+G:\370Code\THe BOok MArket\bin\System.Web.Helpers.dll
+G:\370Code\THe BOok MArket\bin\System.Web.Mvc.dll
+G:\370Code\THe BOok MArket\bin\System.Web.Optimization.dll
+G:\370Code\THe BOok MArket\bin\System.Web.Razor.dll
+G:\370Code\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
+G:\370Code\THe BOok MArket\bin\System.Web.WebPages.dll
+G:\370Code\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
+G:\370Code\THe BOok MArket\bin\WebGrease.dll
+G:\370Code\THe BOok MArket\bin\Dapper.xml
+G:\370Code\THe BOok MArket\bin\EntityFramework.xml
+G:\370Code\THe BOok MArket\bin\EntityFramework.SqlServer.xml
+G:\370Code\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\370Code\THe BOok MArket\bin\Newtonsoft.Json.xml
+G:\370Code\THe BOok MArket\bin\System.Web.Helpers.xml
+G:\370Code\THe BOok MArket\bin\System.Web.Mvc.xml
+G:\370Code\THe BOok MArket\bin\System.Web.Optimization.xml
+G:\370Code\THe BOok MArket\bin\System.Web.Razor.xml
+G:\370Code\THe BOok MArket\bin\System.Web.WebPages.xml
+G:\370Code\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
+G:\370Code\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
+G:\370Code\THe BOok MArket\bin\Antlr3.Runtime.pdb
+G:\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
+G:\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
+G:\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.dll
+G:\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
+G:\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\THe BOok MArket.dll.config
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\THe BOok MArket.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\THe BOok MArket.pdb
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\csc.exe
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\csc.exe.config
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\csc.rsp
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\csi.exe
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\csi.exe.config
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\csi.rsp
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.AppContext.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Console.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Net.Http.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Net.Sockets.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.ValueTuple.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\vbc.exe
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\vbc.exe.config
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\vbc.rsp
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Antlr3.Runtime.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Dapper.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\EntityFramework.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\QRCoder.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Drawing.Common.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Helpers.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Mvc.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Optimization.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Razor.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.WebPages.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\WebGrease.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Dapper.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\EntityFramework.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Newtonsoft.Json.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Helpers.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Mvc.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Optimization.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.Razor.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.WebPages.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\bin\Antlr3.Runtime.pdb
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.dll
+C:\Users\user\Desktop\Systems-Project\Project 370\Del5,6&7\BookMarketSystem\370Code\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
