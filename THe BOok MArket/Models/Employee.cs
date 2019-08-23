@@ -34,6 +34,7 @@ namespace THe_BOok_MArket.Models
         public string ImageData { get; set; }
 
         public HttpPostedFileBase ImageFile { get; set; }
+
         public virtual Employee_Gender Employee_Gender { get; set; }
         public virtual Employee_Title Employee_Title { get; set; }
         public virtual User User { get; set; }

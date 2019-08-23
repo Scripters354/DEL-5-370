@@ -35,6 +35,12 @@
     <Property Name="Customer_ID" Type="Int32" />
     <NavigationProperty Name="Book_Request_Line" Relationship="Self.FK__Book_Requ__Book___6477ECF3" FromRole="Book_Request" ToRole="Book_Request_Line" />
     <NavigationProperty Name="Customer" Relationship="Self.FK__Book_Requ__Custo__619B8048" FromRole="Book_Request" ToRole="Customer" />
+    <Property Name="Book_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Book_Author" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Book_Edition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Phone" Type="Int32" />
   </EntityType>
   <EntityType Name="Book_Request_Line">
     <Key>
@@ -171,7 +177,7 @@
     </Key>
     <Property Name="Price_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Inventory_ID" Type="Int32" />
-    <Property Name="DateActive" Type="DateTime" Precision="0" />
+    <Property Name="DateActive" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Inventory" Relationship="Self.FK__Inventory__Inven__1DE57479" FromRole="Inventory_Price" ToRole="Inventory" />
   </EntityType>
   <EntityType Name="Inventory_Supplier">
@@ -193,7 +199,7 @@
     <Property Name="InvSuppOrder_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="InvSupplier_ID" Type="Int32" />
     <Property Name="SuppOrder_Status_ID" Type="Int32" />
-    <Property Name="Order_Date" Type="DateTime" Precision="0" />
+    <Property Name="Order_Date" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Inventory_Supplier" Relationship="Self.FK__Inventory__InvSu__6C190EBB" FromRole="Inventory_Supplier_Order" ToRole="Inventory_Supplier" />
     <NavigationProperty Name="Order_Status" Relationship="Self.FK__Inventory__SuppO__6D0D32F4" FromRole="Inventory_Supplier_Order" ToRole="Order_Status" />
     <NavigationProperty Name="Order_Line" Relationship="Self.FK__Order_Lin__InvSu__6FE99F9F" FromRole="Inventory_Supplier_Order" ToRole="Order_Line" />
@@ -220,7 +226,7 @@
     <Property Name="SuppOrder_Status_ID" Type="Int32" />
     <Property Name="Quanity" Type="Int32" />
     <Property Name="Line_Total" Type="Double" />
-    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Inventory" Relationship="Self.FK__Order_Lin__Inven__70DDC3D8" FromRole="Order_Line" ToRole="Inventory" />
     <NavigationProperty Name="Inventory_Supplier_Order" Relationship="Self.FK__Order_Lin__InvSu__6FE99F9F" FromRole="Order_Line" ToRole="Inventory_Supplier_Order" />
     <NavigationProperty Name="Order_Status" Relationship="Self.FK__Order_Lin__SuppO__71D1E811" FromRole="Order_Line" ToRole="Order_Status" />
@@ -250,7 +256,7 @@
     </Key>
     <Property Name="ProsBook_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BookSupplier_ID" Type="Int32" />
-    <Property Name="ProsBook_Date" Type="DateTime" Precision="0" />
+    <Property Name="ProsBook_Date" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Book_Supplier" Relationship="Self.FK__Prospecti__BookS__5165187F" FromRole="Prospective_Book" ToRole="Book_Supplier" />
   </EntityType>
   <EntityType Name="Purchase">
@@ -283,7 +289,7 @@
     <Property Name="InvSuppOrder_ID" Type="Int32" />
     <Property Name="InvSupplier_ID" Type="Int32" />
     <Property Name="SuppOrder_Status_ID" Type="Int32" />
-    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
     <Property Name="Quanity" Type="Int32" />
     <NavigationProperty Name="Inventory_Supplier" Relationship="Self.FK__Received___InvSu__75A278F5" FromRole="Received_Supplier_Order" ToRole="Inventory_Supplier" />
     <NavigationProperty Name="Inventory_Supplier_Order" Relationship="Self.FK__Received___InvSu__74AE54BC" FromRole="Received_Supplier_Order" ToRole="Inventory_Supplier_Order" />
@@ -297,7 +303,7 @@
     <Property Name="ReturnSupp_Order_ID" Type="Int32" Nullable="false" />
     <Property Name="InvSuppOrder_ID" Type="Int32" Nullable="false" />
     <Property Name="Quanity" Type="Int32" />
-    <Property Name="Return_Date" Type="DateTime" Precision="0" />
+    <Property Name="Return_Date" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Inventory_Supplier_Order" Relationship="Self.FK__Return_Li__InvSu__7D439ABD" FromRole="Return_Line" ToRole="Inventory_Supplier_Order" />
     <NavigationProperty Name="Return_Supplier_Order" Relationship="Self.FK__Return_Li__Retur__7C4F7684" FromRole="Return_Line" ToRole="Return_Supplier_Order" />
   </EntityType>
@@ -318,7 +324,7 @@
     <Property Name="Return_ID" Type="Int32" Nullable="false" />
     <Property Name="Sale_ID" Type="Int32" Nullable="false" />
     <Property Name="Return_Quantity" Type="Int32" />
-    <Property Name="Return_Date" Type="DateTime" Precision="0" />
+    <Property Name="Return_Date" Type="DateTime" Precision="3" />
     <Property Name="Reason_For_Return" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Return_Sale" Relationship="Self.FK__Return_Sa__Retur__412EB0B6" FromRole="Return_Sale_Line" ToRole="Return_Sale" />
     <NavigationProperty Name="Sale" Relationship="Self.FK__Return_Sa__Sale___4222D4EF" FromRole="Return_Sale_Line" ToRole="Sale" />
@@ -361,7 +367,7 @@
     <Property Name="Customer_ID" Type="Int32" Nullable="false" />
     <Property Name="Quanity" Type="Int32" />
     <Property Name="Sale_Total" Type="Double" />
-    <Property Name="Sale_Date" Type="DateTime" Precision="0" />
+    <Property Name="Sale_Date" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Customer" Relationship="Self.FK__Sale_Line__Custo__3B75D760" FromRole="Sale_Line" ToRole="Customer" />
     <NavigationProperty Name="Inventory" Relationship="Self.FK__Sale_Line__Inven__3A81B327" FromRole="Sale_Line" ToRole="Inventory" />
     <NavigationProperty Name="Sale" Relationship="Self.FK__Sale_Line__Sale___398D8EEE" FromRole="Sale_Line" ToRole="Sale" />
@@ -413,7 +419,7 @@
     </Key>
     <Property Name="Write_Off_ID" Type="Int32" Nullable="false" />
     <Property Name="Inventory_ID" Type="Int32" Nullable="false" />
-    <Property Name="Write_Off_Date" Type="DateTime" Precision="0" />
+    <Property Name="Write_Off_Date" Type="DateTime" Precision="3" />
     <Property Name="Write_Off_Reason" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Inventory" Relationship="Self.FK__Write_Off__Inven__48CFD27E" FromRole="Write_Off_Line" ToRole="Inventory" />
     <NavigationProperty Name="Write_Off_Stock" Relationship="Self.FK__Write_Off__Write__47DBAE45" FromRole="Write_Off_Line" ToRole="Write_Off_Stock" />

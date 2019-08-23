@@ -22,6 +22,12 @@ namespace THe_BOok_MArket.Models
     
         public int Book_Request_ID { get; set; }
         public Nullable<int> Customer_ID { get; set; }
+        public string Book_Title { get; set; }
+        public string Book_Author { get; set; }
+        public string Book_Edition { get; set; }
+        public string Customer_Name { get; set; }
+        public string Customer_Surname { get; set; }
+        public Nullable<int> Customer_Phone { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Book_Request_Line> Book_Request_Line { get; set; }

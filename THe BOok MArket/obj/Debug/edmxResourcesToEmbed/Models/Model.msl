@@ -26,6 +26,12 @@
     <EntitySetMapping Name="Book_Request">
       <EntityTypeMapping TypeName="The_Book_MarketModel.Book_Request">
         <MappingFragment StoreEntitySet="Book_Request">
+          <ScalarProperty Name="Customer_Phone" ColumnName="Customer_Phone" />
+          <ScalarProperty Name="Customer_Surname" ColumnName="Customer_Surname" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Book_Edition" ColumnName="Book_Edition" />
+          <ScalarProperty Name="Book_Author" ColumnName="Book_Author" />
+          <ScalarProperty Name="Book_Title" ColumnName="Book_Title" />
           <ScalarProperty Name="Book_Request_ID" ColumnName="Book_Request_ID" />
           <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
         </MappingFragment>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<THe_BOok_MArket.Models.Book_Request>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutfluid.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_Edition)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Customer_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Phone)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.Customer_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book_Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book_Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book_Edition)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Customer_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_Phone)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.Customer_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Book_Request_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Book_Request_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Book_Request_ID })
+        </td>
+    </tr>
+}
+
+</table>

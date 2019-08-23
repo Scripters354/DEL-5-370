@@ -123,10 +123,10 @@
                                                         <li>
                                                             <a href="#bookRequestdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Book Requests </a>
                                                             <ul id="bookRequestdropdownDropdown" class="collapse list-unstyled ">
-                                                                <li><a href="#">Add Book Request</a></li>
-                                                                <li><a href="#">Maintain Book Request</a></li>
-                                                                <li><a href="#">Search Book Request</a></li>
-                                                                <li><a href="#">Cancel Book Request</a></li>
+                                                                <li>@Html.ActionLink("Add Book Request", "Create", "Book_Request")</li>
+                                                                <li>@Html.ActionLink("Maintain Book Request", "Index", "Book_Request")</li>
+                                                                <li>@Html.ActionLink("Search Book Request", "Index", "Book_Request")</li>
+                                                                <li>@Html.ActionLink("Cancel Book Request", "Index", "Book_Request")</li>
                                                             </ul>
                                                         </li>
 
@@ -136,9 +136,9 @@
                                                         <li>
                                                             <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-picture"></i>Customers </a>
                                                             <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                                                                <li><a href="#">Add Customers</a></li>
-                                                                <li><a href="#">Maintain Customers</a></li>
-                                                                <li><a href="#">Search Customers</a></li>
+                                                                <li>@Html.ActionLink("Add Customer", "Create", "Customers")</li>
+                                                                <li>@Html.ActionLink("Maintain Customer", "Index", "Customers")</li>
+                                                                <li>@Html.ActionLink("Search Customers", "Index", "Customer")</li>
                                                             </ul>
                                                         </li>
 
@@ -193,9 +193,9 @@
                                                         <li>
                                                             <a href="#ptypedropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="far fa-credit-card"></i>Payment Types </a>
                                                             <ul id="ptypedropdownDropdown" class="collapse list-unstyled ">
-                                                                <li><a href="#">Add Payment Type</a></li>
-                                                                <li><a href="#">Maintain Payment Type</a></li>
-                                                                <li><a href="#">Search Payment Type</a></li>
+                                                                <li>@Html.ActionLink("Add Payment Type", "Create", "Payment_Type")</li>
+                                                                <li>@Html.ActionLink("Maintain Payment Type", "Index", "Payment_Type")</li>
+                                                                <li>@Html.ActionLink("Search Payment Type", "Index", "Payment_Type")</li>
                                                             </ul>
                                                         </li>
 
@@ -203,10 +203,10 @@
                                                         <li>
                                                             <a href="#inventorydropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Inventory </a>
                                                             <ul id="inventorydropdownDropdown" class="collapse list-unstyled ">
-                                                                <li><a href="#">Add Inventory</a></li>
-                                                                <li><a href="#">Maintain Inventory</a></li>
-                                                                <li><a href="#">Write-off Inventory</a></li>
-                                                                <li><a href="#">Stock Take</a></li>
+                                                                <li>@Html.ActionLink("Add Inventory", "Create", "Inventories")</li>
+                                                                <li>@Html.ActionLink("Maintain Inventory /Stock Take", "Index", "Inventories")</li>
+                                                                <li>@Html.ActionLink("Search Inventory", "Index", "Inventories")</li>
+                                                                @*<li><a href="#">Stock Take</a></li>*@
                                                             </ul>
                                                         </li>
 
@@ -216,9 +216,9 @@
                                                         <li>
                                                             <a href="#inventoryTypedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Inventory Type </a>
                                                             <ul id="inventoryTypedropdownDropdown" class="collapse list-unstyled ">
-                                                                <li><a href="#">Add Inventory Type</a></li>
-                                                                <li><a href="#">Maintain Inventory Type</a></li>
-                                                                <li><a href="#">Search Inventory Type</a></li>
+                                                                <li>@Html.ActionLink("Add Inventory Type", "Create", "Inventory_Type")</li>
+                                                                <li>@Html.ActionLink("Maintain Inventory Type", "Index", "Inventory_Type")</li>
+                                                                <li>@Html.ActionLink("Search Inventory Type", "Index", "Inventory_Type")</li>
                                                             </ul>
                                                         </li>
 
