@@ -10,131 +10,122 @@ using THe_BOok_MArket.Models;
 
 namespace THe_BOok_MArket.Controllers
 {
-    public class Book_RequestController : Controller
+    public class Book_SupplierController : Controller
     {
         private The_Book_MarketEntities db = new The_Book_MarketEntities();
 
-        // GET: Book_Request
-
-
+        // GET: Book_Supplier
         public ActionResult Index(string searchBy, string search)
         {
-            if (searchBy == "BookTitle")
+            if (searchBy == "Name")
             {
-                return View(db.Book_Request.Where(x => x.Book_Title.Contains(search) || search == null).ToList());
+                return View(db.Book_Supplier.Where(x => x.BookSupplier_Name.Contains(search) || search == null).ToList());
             }
-            else if (searchBy == "BookAuthor")
+            else if (searchBy == "Email")
             {
-                return View(db.Book_Request.Where(x => x.Book_Author.StartsWith(search) || search == null).ToList());
+                return View(db.Book_Supplier.Where(x => x.BookSupplier_Email.StartsWith(search) || search == null).ToList());
             }
-            //else if (searchBy == "BookEdition")
-            //{
-            //    return View(db.Book_Request.Where(x => x.Book_Edition.StartsWith(search) || search == null).ToList());
-            //}
+
             else
             {
-                return View(db.Book_Request.Where(x => x.Book_Edition.Contains(search) || search == null).ToList());
+                return View(db.Book_Supplier.Where(x => x.BookSupplier_Surname.Contains(search) || search == null).ToList());
             }
 
 
         }
 
 
-        // GET: Book_Request/Details/5
+        // GET: Book_Supplier/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book_Request book_Request = db.Book_Request.Find(id);
-            if (book_Request == null)
+            Book_Supplier book_Supplier = db.Book_Supplier.Find(id);
+            if (book_Supplier == null)
             {
                 return HttpNotFound();
             }
-            return View(book_Request);
+            return View(book_Supplier);
         }
 
-        // GET: Book_Request/Create
+        // GET: Book_Supplier/Create
         public ActionResult Create()
         {
-            ViewBag.Customer_ID = new SelectList(db.Customers, "Customer_ID", "Customer_Name");
             return View();
         }
 
-        // POST: Book_Request/Create
+        // POST: Book_Supplier/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Book_Request_ID,Customer_ID,Book_Title,Book_Author,Book_Edition,Customer_Name,Customer_Surname,Customer_Phone")] Book_Request book_Request)
+        public ActionResult Create([Bind(Include = "BookSupplier_ID,BookSupplier_Name,BookSupplier_Surname,BookSupplier_Email,BookSupplier_Address,BookSupplier_Type")] Book_Supplier book_Supplier)
         {
             if (ModelState.IsValid)
             {
-                db.Book_Request.Add(book_Request);
+                db.Book_Supplier.Add(book_Supplier);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Customer_ID = new SelectList(db.Customers, "Customer_ID", "Customer_Name", book_Request.Customer_ID);
-            return View(book_Request);
+            return View(book_Supplier);
         }
 
-        // GET: Book_Request/Edit/5
+        // GET: Book_Supplier/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book_Request book_Request = db.Book_Request.Find(id);
-            if (book_Request == null)
+            Book_Supplier book_Supplier = db.Book_Supplier.Find(id);
+            if (book_Supplier == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.Customer_ID = new SelectList(db.Customers, "Customer_ID", "Customer_Name", book_Request.Customer_ID);
-            return View(book_Request);
+            return View(book_Supplier);
         }
 
-        // POST: Book_Request/Edit/5
+        // POST: Book_Supplier/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Book_Request_ID,Customer_ID,Book_Title,Book_Author,Book_Edition,Customer_Name,Customer_Surname,Customer_Phone")] Book_Request book_Request)
+        public ActionResult Edit([Bind(Include = "BookSupplier_ID,BookSupplier_Name,BookSupplier_Surname,BookSupplier_Email,BookSupplier_Address,BookSupplier_Type")] Book_Supplier book_Supplier)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(book_Request).State = EntityState.Modified;
+                db.Entry(book_Supplier).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Customer_ID = new SelectList(db.Customers, "Customer_ID", "Customer_Name", book_Request.Customer_ID);
-            return View(book_Request);
+            return View(book_Supplier);
         }
 
-        // GET: Book_Request/Delete/5
+        // GET: Book_Supplier/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book_Request book_Request = db.Book_Request.Find(id);
-            if (book_Request == null)
+            Book_Supplier book_Supplier = db.Book_Supplier.Find(id);
+            if (book_Supplier == null)
             {
                 return HttpNotFound();
             }
-            return View(book_Request);
+            return View(book_Supplier);
         }
 
-        // POST: Book_Request/Delete/5
+        // POST: Book_Supplier/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Book_Request book_Request = db.Book_Request.Find(id);
-            db.Book_Request.Remove(book_Request);
+            Book_Supplier book_Supplier = db.Book_Supplier.Find(id);
+            db.Book_Supplier.Remove(book_Supplier);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

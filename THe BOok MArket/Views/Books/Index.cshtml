@@ -1,4 +1,4 @@
-﻿@model IEnumerable<THe_BOok_MArket.Models.Book_Request>
+﻿@model IEnumerable<THe_BOok_MArket.Models.Book>
 
 @{
     ViewBag.Title = "Index";
@@ -10,28 +10,27 @@
 <!--Page Header Title-->
 <header class="page-header">
     <div class="container-fluid">
-        <h2 class="no-margin-bottom">Search Book Request</h2>
+        <h2 class="no-margin-bottom">Search Book</h2>
     </div>
 </header>
 <!--Page Breadcrumb for Active Page navigation-->
 <div class="breadcrumb-holder container-fluid">
     <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml">Home</a></li>
-        <li class="breadcrumb-item active">Search for Book Request</li>
+        <li class="breadcrumb-item active">Search for Books</li>
     </ul>
 </div>
 <p>
-    @using (Html.BeginForm("Index", "Book_Request", FormMethod.Get))
+    @using (Html.BeginForm("Index", "Books", FormMethod.Get))
     {
         <b>SearchBy:</b> @Html.RadioButton("searchBy", "BookTitle", true) <text>Book Title</text>
         @Html.RadioButton("searchBy", "BookAuthor") <text>Book Author</text>
-        @Html.RadioButton("searchBy", "BookEdition") <text>Book Edition</text>
+        @Html.RadioButton("searchBy", "ISBN") <text>ISBN</text>
         <br />
         @Html.TextBox("search") <input type="submit" value="Search" />
     }
 
 </p>
-
 <section class="forms">
     <div class="container-fluid">
         <div class="row">
@@ -39,9 +38,14 @@
                 <div class="card">
 
                     <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Book Request List</h3>
+                        <h3 class="h4">Book List</h3>
                     </div>
 
+
+                    <h2>Index</h2>
+                    <p>
+                        @Html.ActionLink("Add Prospective Book?", "Index", "Prospective_Book")
+                    </p>
                     <p>
                         @Html.ActionLink("Create New", "Create")
                     </p>
@@ -54,19 +58,13 @@
                                 @Html.DisplayNameFor(model => model.Book_Author)
                             </th>
                             <th>
+                                @Html.DisplayNameFor(model => model.ISBN)
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.Book_Edition)
                             </th>
-                            @*<th>
-                                    @Html.DisplayNameFor(model => model.Customer_Name)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Customer_Surname)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Customer_Phone)
-                                </th>*@
                             <th>
-                                @Html.DisplayNameFor(model => model.Customer.Customer_Name)
+                                @Html.DisplayNameFor(model => model.Book_Status.BookStatus_Description)
                             </th>
                             <th></th>
                         </tr>
@@ -81,24 +79,18 @@
                                     @Html.DisplayFor(modelItem => item.Book_Author)
                                 </td>
                                 <td>
+                                    @Html.DisplayFor(modelItem => item.ISBN)
+                                </td>
+                                <td>
                                     @Html.DisplayFor(modelItem => item.Book_Edition)
                                 </td>
-                                @*<td>
-                                        @Html.DisplayFor(modelItem => item.Customer_Name)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Customer_Surname)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Customer_Phone)
-                                    </td>*@
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Customer.Customer_Name)
+                                    @Html.DisplayFor(modelItem => item.Book_Status.BookStatus_Description)
                                 </td>
                                 <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.Book_Request_ID }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.Book_Request_ID }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.Book_Request_ID })
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Book_ID }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.Book_ID }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Book_ID })
                                 </td>
                             </tr>
                         }
@@ -117,25 +109,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@*<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@

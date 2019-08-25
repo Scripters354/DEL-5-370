@@ -155,7 +155,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\Book_RequestController.cs" />
+    <Compile Include="Controllers\Book_SupplierController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="Controllers\Inventory_TypeController.cs" />
     <Compile Include="Controllers\Payment_TypeController.cs" />
     <Compile Include="Controllers\ProfilePicController.cs" />
+    <Compile Include="Controllers\Prospective_BookController.cs" />
     <Compile Include="Controllers\PurchaseController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Controllers\UsersAuthController.cs" />
@@ -735,6 +738,21 @@
     <Content Include="Views\Book_Request\Details.cshtml" />
     <Content Include="Views\Book_Request\Edit.cshtml" />
     <Content Include="Views\Book_Request\Index.cshtml" />
+    <Content Include="Views\Prospective_Book\Create.cshtml" />
+    <Content Include="Views\Prospective_Book\Delete.cshtml" />
+    <Content Include="Views\Prospective_Book\Details.cshtml" />
+    <Content Include="Views\Prospective_Book\Edit.cshtml" />
+    <Content Include="Views\Prospective_Book\Index.cshtml" />
+    <Content Include="Views\Books\Create.cshtml" />
+    <Content Include="Views\Books\Delete.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
+    <Content Include="Views\Books\Edit.cshtml" />
+    <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Book_Supplier\Create.cshtml" />
+    <Content Include="Views\Book_Supplier\Delete.cshtml" />
+    <Content Include="Views\Book_Supplier\Details.cshtml" />
+    <Content Include="Views\Book_Supplier\Edit.cshtml" />
+    <Content Include="Views\Book_Supplier\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

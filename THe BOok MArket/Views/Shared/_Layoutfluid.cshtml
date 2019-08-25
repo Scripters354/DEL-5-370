@@ -112,10 +112,10 @@
                                                         <li>
                                                             <a href="#prospectivedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i> Prospective Books </a>
                                                             <ul id="prospectivedropdownDropdown" class="collapse list-unstyled ">
-                                                                <li><a href="#">Add Prosepctive Books</a></li>
-                                                                <li><a href="#">Maintain Prosepctive Books</a></li>
-                                                                <li><a href="#">Search Prosepctive Books</a></li>
-                                                                <li><a href="#">Cancel Prosepctive Books</a></li>
+                                                                <li>@Html.ActionLink("Add Prospective Book", "Create", "Prospective_Book")</li>
+                                                                <li>@Html.ActionLink("Maintain Prospective Book", "Index", "Prospective_Book")</li>
+                                                                <li>@Html.ActionLink("Search Prospective Book", "Index", "Prospective_Book")</li>
+                                                                <li>@Html.ActionLink("Cancel Prospective Book", "Index", "Prospective_Book")</li>
                                                             </ul>
                                                         </li>
 
@@ -255,7 +255,6 @@
     </div>
     <div class="content-inner">
         @RenderBody();
-
     </div>
 
     <!-- JavaScript files-->

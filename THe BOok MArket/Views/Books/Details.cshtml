@@ -1,0 +1,59 @@
+﻿@model THe_BOok_MArket.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layoutfluid.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Edition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Edition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Status.BookStatus_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Status.BookStatus_Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Book_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
