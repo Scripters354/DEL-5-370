@@ -1,0 +1,266 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Book Market</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href=@Url.Content("~/vendor/bootstrap/css/bootstrap.min.css")>
+    @RenderSection("vendors", false)
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href=@Url.Content("~/vendor/font-awesome/css/font-awesome.min.css")>
+    @RenderSection("Styles", false)
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href=@Url.Content("~/css/fontastic.css")>
+    @RenderSection("Styles", false)
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href=@Url.Content("~/css/style.default.css") id="theme-stylesheet">
+    @RenderSection("Styles", false)
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href=@Url.Content("~/css/custom.css")>
+    @RenderSection("Styles", false)
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/img/favicon.ico">
+
+
+</head>
+<body>
+    <div class="page">
+
+        <!-- Main Navbar-->
+        <header class="header">
+            <nav class="navbar">
+
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <!-- Navbar Header-->
+                        <div class="navbar-header">
+                            <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+                                <div class="brand-text d-none d-lg-inline-block"><span>The </span><strong>Bookmarket</strong></div>
+                                <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
+                            </a>
+                            <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                        </div>
+                        <!-- Navbar Menu -->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+
+                            <!-- Logout    -->
+                            <li class="nav-item">
+                                @if (Request.IsAuthenticated)
+                                {
+                                    using (Html.BeginForm("Logout", "UsersAuth", FormMethod.Post, new { id = "logoutForm" }))
+                                    {
+                                        <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+
+                                    }
+                                }
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        @if (Request.IsAuthenticated)
+        {
+            <div class="page-content d-flex align-items-stretch">
+                <!-- Side Navbar -->
+                <nav class="side-navbar">
+                    <!-- Sidebar Header-->
+                    <div class="sidebar-header d-flex align-items-center">
+                        <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="title">
+                            <h1>@Html.ActionLink("Profile", "ForgotPassword", "UsersAuth")</h1>
+                            <h1 class="h4">@HttpContext.Current.User.Identity.Name.Substring(0, 7)</h1>
+                        </div>
+                    </div>
+                    <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+                                                    <ul class="list-unstyled">
+
+                                                        <!-- Sales drowpdown-->
+                                                        <li>
+                                                            <a href="#salesdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Sales </a>
+                                                            <ul id="salesdropdownDropdown" class="collapse list-unstyled ">
+                                                                <li><a href="#">Make Sale</a></li>
+                                                                <li><a href="#">Search Sale</a></li>
+                                                                <li><a href="#">Return Sale</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- Prosepctive drowpdown-->
+                                                        <li>
+                                                            <a href="#prospectivedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-padnote"></i> Prospective Books </a>
+                                                            <ul id="prospectivedropdownDropdown" class="collapse list-unstyled ">
+                                                                <li>cc</li>
+                                                                <li>@Html.ActionLink("Maintain Prospective Book", "Index", "Prospective_Book")</li>
+                                                                <li>@Html.ActionLink("Search Prospective Book", "Index", "Prospective_Book")</li>
+                                                                <li>@Html.ActionLink("Cancel Prospective Book", "Index", "Prospective_Book")</li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- Book Request drowpdown-->
+                                                        <li>
+                                                            <a href="#bookRequestdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-form"></i> Book Requests </a>
+                                                            <ul id="bookRequestdropdownDropdown" class="collapse list-unstyled ">
+                                                                <li>@Html.ActionLink("Add Book Request", "Create", "Book_Request")</li>
+                                                                <li>@Html.ActionLink("Maintain Book Request", "Index", "Book_Request")</li>
+                                                                <li>@Html.ActionLink("Search Book Request", "Index", "Book_Request")</li>
+                                                                <li>@Html.ActionLink("Cancel Book Request", "Index", "Book_Request")</li>
+                                                            </ul>
+                                                        </li>
+
+
+                                                        <!-- Customer drowpdown-->
+
+                                                        <li>
+                                                            <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-picture"></i>Customers </a>
+                                                            <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                                                                <li>@Html.ActionLink("Add Customer", "Create", "Customers")</li>
+                                                                <li>@Html.ActionLink("Maintain Customer", "Index", "Customers")</li>
+                                                                <li>@Html.ActionLink("Search Customers", "Index", "Customer")</li>
+                                                            </ul>
+                                                        </li>
+                                                        <!-- Inventory drowpdown-->
+                                                       
+
+
+                                                        @if (User.IsInRole("800"))
+                                                        {
+
+                                                            <li>
+                                                                <a href="#employeedropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Employees </a>
+                                                                <ul id="employeedropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li>@Html.ActionLink("Add Employee", "Create", "Employee")</li>
+                                                                    <li>@Html.ActionLink("Maintain Employee", "Index", "Employee")</li>
+                                                                    <li>@Html.ActionLink("Search Employee", "Index", "Employee")</li>
+                                                                    <li>@Html.ActionLink("Manage Roles", "Index", "UserRole")</li>
+                                                                    <li>@Html.ActionLink("User Authentication", "Register", "UsersAuth")</li>
+                                                                    <li>@Html.ActionLink("Password Reset", "ForgotPassword", "UsersAuth")</li>
+
+                                                                    <li><a href="#">Maintain User Role</a></li>
+                                                                    <li>@Html.ActionLink("Account", "Register", "UsersAuth")</li>
+                                                                </ul>
+                                                            </li>
+
+                                                            <!--Books-->
+                                                            <li>
+                                                                <a href="#booksdropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-paper-airplane"></i>Books </a>
+                                                                <ul id="booksdropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li>@Html.ActionLink("Add Book", "Create", "Books")</li>
+                                                                    <li>@Html.ActionLink("Maintain Book", "Index", "Books")</li>
+                                                                    <li>@Html.ActionLink("Search Books", "Index", "Books")</li>
+                                                                </ul>
+                                                            </li>
+
+
+                                                            <!-- Purchase drowpdown-->
+                                                            <li>
+                                                                <a href="#purchasedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-bill"></i> Purchase </a>
+                                                                <ul id="purchasedropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li><a href="#">Make Purchase</a></li>
+                                                                    <li><a href="#">Cancel Purchase</a></li>
+
+                                                                </ul>
+                                                            </li>
+
+                                                            <!-- Supplier drowpdown-->
+                                                            <li>
+                                                                <a href="#suplplierdropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="icon-flask"></i>Suppliers </a>
+                                                                <ul id="suplplierdropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li>@Html.ActionLink("Add Supplier", "Create", "Inventory_Supplier")</li>
+                                                                    <li><a href="#">Maintain Supplier</a></li>
+                                                                    <li><a href="#">Search Supplier</a></li>
+                                                                    <li><a href="#">Place Supplier Order</a></li>
+                                                                    <li><a href="#">Search Supplier Order</a></li>
+                                                                    <li><a href="#">Cancel Supplier Order</a></li>
+                                                                    <li><a href="#">Receive Supplier Order</a></li>
+                                                                    <li><a href="#">Return Supplier Order</a></li>
+                                                                </ul>
+                                                            </li>
+
+
+
+                                                            <!-- Payemtn Type drowpdown-->
+                                                            <li>
+                                                                <a href="#ptypedropdownDropdown" aria-expanded="false" data-toggle="collapse"><i class="far fa-credit-card"></i>Payment Types </a>
+                                                                <ul id="ptypedropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li>@Html.ActionLink("Add Payment Type", "Create", "Payment_Type")</li>
+                                                                    <li>@Html.ActionLink("Maintain Payment Type", "Index", "Payment_Type")</li>
+                                                                    <li>@Html.ActionLink("Search Payment Type", "Index", "Payment_Type")</li>
+                                                                </ul>
+                                                            </li>
+
+                                                            <!-- Inventory drowpdown-->
+                                                            <li>
+                                                                <a href="#inventorydropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-list"></i> Inventory </a>
+                                                                <ul id="inventorydropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li>@Html.ActionLink("Add Inventory", "Create", "Inventories")</li>
+                                                                    <li>@Html.ActionLink("Maintain Inventory /Stock Take", "Index", "Inventories")</li>
+                                                                    <li>@Html.ActionLink("Search Inventory", "Index", "Inventories")</li>
+                                                                    @*<li><a href="#">Stock Take</a></li>*@
+                                                                </ul>
+                                                            </li>
+
+
+
+                                                            <!-- Inventory Type drowpdown-->
+                                                            <li>
+                                                                <a href="#inventoryTypedropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-list-1"></i> Inventory Type </a>
+                                                                <ul id="inventoryTypedropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li>@Html.ActionLink("Add Inventory Type", "Create", "Inventory_Type")</li>
+                                                                    <li>@Html.ActionLink("Maintain Inventory Type", "Index", "Inventory_Type")</li>
+                                                                    <li>@Html.ActionLink("Search Inventory Type", "Index", "Inventory_Type")</li>
+                                                                </ul>
+                                                            </li>
+
+                                                            <!-- Reporting drowpdown-->
+                                                            <li>
+                                                                <a href="#reportingdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-presentation"></i> Reporting </a>
+                                                                <ul id="reportingdropdownDropdown" class="collapse list-unstyled ">
+                                                                    <li><a href="#">Sales Report</a></li>
+                                                                    <li><a href="#">Supplier Performance Report</a></li>
+                                                                    <li><a href="#">Supplier Orders</a></li>
+                                                                    <li><a href="#">Inventory Report</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        }
+                                                                                                                                                                  
+                                                                        
+                </nav>
+
+                <!-- The Inner page/body outside of the sidebar nav ##AtRender Body-->
+                <div class="content-inner">
+                    @RenderBody()
+                </div>
+
+            </div>
+        }
+
+
+    </div>
+
+    <!-- JavaScript files-->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/popper.js/umd/popper.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/vendor/jquery.cookie/jquery.cookie.js"></script>
+    <script src="~/vendor/chart.js/Chart.min.js"></script>
+    <script src="~/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <!-- Main File-->
+    <script src="~/js/front.js"></script>
+</body>
+</html>
+
+

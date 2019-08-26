@@ -51,7 +51,7 @@ CREATE TABLE Inventory_Price
 (
 Price_ID int Identity (55,1) Primary Key Not Null,
 Inventory_ID int references Inventory (Inventory_ID),
-DateActive DATE 
+DateActive DATETIME 
 )
 GO 
 
@@ -149,7 +149,7 @@ Inventory_ID int references Inventory (Inventory_ID),
 Customer_ID int references Customer(Customer_ID),
 Quanity int ,
 Sale_Total FLOAT, 
-Sale_Date DATE,
+Sale_Date DATETIME,
 PRIMARY KEY (Sale_ID, Customer_ID,Inventory_ID)
 )
 GO  
@@ -166,7 +166,7 @@ CREATE TABLE Return_Sale_Line
 Return_ID int  references Return_Sale (Return_ID) Not Null,
 Sale_ID int references Sale (Sale_ID), 
 Return_Quantity int,
-Return_Date DATE,
+Return_Date DATETIME,
 Reason_For_Return varchar(200)
 Primary key(Return_ID,Sale_ID)
 )
@@ -183,7 +183,7 @@ CREATE TABLE Write_Off_Line
 (
 Write_Off_ID int references Write_Off_Stock (Write_Off_ID),
 Inventory_ID int references Inventory (Inventory_ID) , 
-[Write_Off_Date] DATE ,
+[Write_Off_Date] DATETIME ,
 Write_Off_Reason varchar(225),
 Primary key(Inventory_ID,Write_Off_ID)
 )
@@ -218,7 +218,7 @@ CREATE TABLE Prospective_Book
 (
 ProsBook_ID int Identity (11000,1) Primary Key Not Null,
 BookSupplier_ID int references Book_Supplier (BookSupplier_ID),
-ProsBook_Date DATE
+ProsBook_Date DATETIME
 )
 GO 
 
@@ -263,10 +263,18 @@ GO
 
 CREATE TABLE Book_Request
 (
+
 Book_Request_ID int Identity (16000,1) Primary Key Not Null,
+Book_Title varchar(50),
+Book_Author varchar(50),
+Book_Edition varchar(50),
 Customer_ID int references Customer(Customer_ID),
+Customer_Name varchar(50),
+Customer_Surname varchar(50),
+Customer_Phone int
  
 )
+go
 
 CREATE TABLE Book_Request_Line
 (
@@ -298,7 +306,7 @@ CREATE TABLE Inventory_Supplier_Order
 InvSuppOrder_ID int Identity (18000,1) Primary Key Not Null,
 InvSupplier_ID int references Inventory_Supplier(InvSupplier_ID),
 SuppOrder_Status_ID int references Order_Status(SuppOrder_Status_ID),
-Order_Date DATE 
+Order_Date DATETIME 
 )
 GO
 
@@ -309,7 +317,7 @@ Inventory_ID int references Inventory(Inventory_ID),
 SuppOrder_Status_ID int references Order_Status(SuppOrder_Status_ID),
 Quanity int, 
 Line_Total FLOAT,
-[Date] DATE,
+[Date] DATETIME,
 Primary Key(InvSuppOrder_ID,Inventory_ID)
 )
 GO  
@@ -320,7 +328,7 @@ RecSupp_Order_ID int Identity (23000,1)  Primary Key Not Null,
 InvSuppOrder_ID int references Inventory_Supplier_Order(InvSuppOrder_ID),
 InvSupplier_ID int references Inventory_Supplier(InvSupplier_ID),
 SuppOrder_Status_ID int references Order_Status(SuppOrder_Status_ID),
-[Date] DATE,
+[Date] DATETIME,
 Quanity int, 
  )
 GO
@@ -339,7 +347,7 @@ CREATE TABLE Return_Line
 ReturnSupp_Order_ID int references Return_Supplier_Order(ReturnSupp_Order_ID) Not Null, 
 InvSuppOrder_ID int references Inventory_Supplier_Order(InvSuppOrder_ID)  ,
 Quanity int, 
-Return_Date DATE
+Return_Date DATETIME
 Primary Key(ReturnSupp_Order_ID,InvSuppOrder_ID)
  )
 GO

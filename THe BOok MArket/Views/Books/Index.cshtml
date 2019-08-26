@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layoutfluid.cshtml";
+    Layout = "~/Views/Shared/Layout12.cshtml";
 }
 
 
@@ -41,64 +41,63 @@
                         <h3 class="h4">Book List</h3>
                     </div>
 
+                    <div class="card-body">
 
-                    <h2>Index</h2>
-                    <p>
-                        @Html.ActionLink("Add Prospective Book?", "Index", "Prospective_Book")
-                    </p>
-                    <p>
-                        @Html.ActionLink("Create New", "Create")
-                    </p>
-                    <table class="table">
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Book_Title)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Book_Author)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.ISBN)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Book_Edition)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Book_Status.BookStatus_Description)
-                            </th>
-                            <th></th>
-                        </tr>
-
-                        @foreach (var item in Model)
-                        {
+                        <p>
+                            @Html.ActionLink("Add Prospective Book?", "Index", "Prospective_Book")
+                        </p>
+                        <p>
+                            @Html.ActionLink("Create New", "Create")
+                        </p>
+                        <table class="table">
                             <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Book_Title)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Book_Author)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ISBN)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Book_Edition)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Book_Status.BookStatus_Description)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.Book_ID }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.Book_ID }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.Book_ID })
-                                </td>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Book_Title)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Book_Author)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ISBN)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Book_Edition)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Book_Status.BookStatus_Description)
+                                </th>
+                                <th></th>
                             </tr>
-                        }
 
-                    </table>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Book_Title)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Book_Author)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ISBN)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Book_Edition)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Book_Status.BookStatus_Description)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.Book_ID }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.Book_ID }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.Book_ID })
+                                    </td>
+                                </tr>
+                            }
 
+                        </table>
 
-
+                    </div>
                 </div>
             </div>
         </div>

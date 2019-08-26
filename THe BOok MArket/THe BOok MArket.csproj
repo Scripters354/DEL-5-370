@@ -753,6 +753,8 @@
     <Content Include="Views\Book_Supplier\Details.cshtml" />
     <Content Include="Views\Book_Supplier\Edit.cshtml" />
     <Content Include="Views\Book_Supplier\Index.cshtml" />
+    <Content Include="Views\Shared\Layout10.cshtml" />
+    <Content Include="Views\Shared\Layout12.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

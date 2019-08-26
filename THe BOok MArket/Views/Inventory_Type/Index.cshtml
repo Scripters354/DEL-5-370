@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout12.cshtml";
 }
 
 <!--Page Header Title-->
@@ -16,18 +17,7 @@
         <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml">Home</a></li>
         <li class="breadcrumb-item active">Search for Inventory Type</li>
     </ul>
-</div>
-<p>
-    @using (Html.BeginForm("Index", "Inventory_Type", FormMethod.Get))
-    {
-        <b>SearchBy:</b> @Html.RadioButton("searchBy", "Name", true) <text>Name</text>
-        @Html.RadioButton("searchBy", "Description") <text>Description</text>
-        @*@Html.RadioButton("searchBy", "Email") <text>Email</text>*@
-        <br />
-        @Html.TextBox("search") <input type="submit" value="Search" />
-    }
-
-</p>
+</div> 
 
 <section class="forms">
     <div class="container-fluid">
@@ -40,17 +30,26 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
+                          
+                            <p>
+                                @using (Html.BeginForm("Index", "Inventory_Type", FormMethod.Get))
+                                {
+                                    <b>SearchBy:</b> @Html.RadioButton("searchBy", "Name", true) <text>Name</text>
+                                    @Html.RadioButton("searchBy", "Description") <text>Description</text>
+                                    @*@Html.RadioButton("searchBy", "Email") <text>Email</text>*@
+                                    <br />
+                                    @Html.TextBox("search") <input type="submit" value="Search" />
+                                }
 
-                            @*<p>
-                                    @Html.ActionLink("Create New", "Create")
-                                </p>*@
+                            </p>
+
                             <table class="table">
                                 <tr>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.InventoryType_Name)
+                                        Inventory Type Name
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.InventoryType_Description)
+                                        Inventory Description
                                     </th>
                                     <th></th>
                                 </tr>

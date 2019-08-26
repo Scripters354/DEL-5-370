@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layoutfluid.cshtml";
+    Layout = "~/Views/Shared/Layout12.cshtml";
 }
 
 
@@ -13,24 +13,14 @@
         <h2 class="no-margin-bottom">Search Book Request</h2>
     </div>
 </header>
+
 <!--Page Breadcrumb for Active Page navigation-->
 <div class="breadcrumb-holder container-fluid">
     <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml">Home</a></li>
-        <li class="breadcrumb-item active">Search for Book Request</li>
+        <li class="breadcrumb-item active">Search Book Request details</li>
     </ul>
 </div>
-<p>
-    @using (Html.BeginForm("Index", "Book_Request", FormMethod.Get))
-    {
-        <b>SearchBy:</b> @Html.RadioButton("searchBy", "BookTitle", true) <text>Book Title</text>
-        @Html.RadioButton("searchBy", "BookAuthor") <text>Book Author</text>
-        @Html.RadioButton("searchBy", "BookEdition") <text>Book Edition</text>
-        <br />
-        @Html.TextBox("search") <input type="submit" value="Search" />
-    }
-
-</p>
 
 <section class="forms">
     <div class="container-fluid">
@@ -42,71 +32,87 @@
                         <h3 class="h4">Book Request List</h3>
                     </div>
 
-                    <p>
-                        @Html.ActionLink("Create New", "Create")
-                    </p>
-                    <table class="table">
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Book_Title)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Book_Author)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Book_Edition)
-                            </th>
-                            @*<th>
-                                    @Html.DisplayNameFor(model => model.Customer_Name)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Customer_Surname)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Customer_Phone)
-                                </th>*@
-                            <th>
-                                @Html.DisplayNameFor(model => model.Customer.Customer_Name)
-                            </th>
-                            <th></th>
-                        </tr>
+                    <div class="card-body">
+                        <div class="table-responsive">
 
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Book_Title)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Book_Author)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Book_Edition)
-                                </td>
-                                @*<td>
-                                        @Html.DisplayFor(modelItem => item.Customer_Name)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Customer_Surname)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Customer_Phone)
-                                    </td>*@
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Customer.Customer_Name)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.Book_Request_ID }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.Book_Request_ID }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.Book_Request_ID })
-                                </td>
-                            </tr>
-                        }
 
-                    </table>
+                            <p>
+                                @using (Html.BeginForm("Index", "Book_Request", FormMethod.Get))
+                                {
+                                    <b>SearchBy:</b> @Html.RadioButton("searchBy", "BookTitle", true) <text>Book Title</text>
+                                    @Html.RadioButton("searchBy", "BookAuthor") <text>Book Author</text>
+                                    @Html.RadioButton("searchBy", "BookEdition") <text>Book Edition</text>
+                                    <br />
+                                    @Html.TextBox("search") <input type="submit" value="Search" />
+                                }
+
+                            </p>
 
 
 
+
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Book Title
+                                    </th>
+                                    <th>
+                                        Book Author
+                                    </th>
+                                    <th>
+                                        Book Edition
+                                    </th>
+                                    @*<th>
+                                            @Html.DisplayNameFor(model => model.Customer_Name)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Customer_Surname)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Customer_Phone)
+                                        </th>*@
+                                    <th>
+                                        Customer Name
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Book_Title)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Book_Author)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Book_Edition)
+                                        </td>
+                                        @*<td>
+                                                @Html.DisplayFor(modelItem => item.Customer_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Customer_Surname)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Customer_Phone)
+                                            </td>*@
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Customer.Customer_Name)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.Book_Request_ID }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.Book_Request_ID }) |
+                                            @Html.ActionLink("Cancel", "Delete", new { id = item.Book_Request_ID })
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,8 +140,5 @@
 
 
 
-@*<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
+
