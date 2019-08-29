@@ -1,0 +1,62 @@
+﻿@model IEnumerable<THe_BOok_MArket.Models.Sale>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SalesList</title>
+</head>
+<body>
+    <h2>All Sales Information</h2>
+
+    @Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
+    @Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+    @Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
+    @Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" }) |
+
+
+    <br /><br />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer.Customer_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee.Employee_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payment_Type.PaymentType_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate.Tax_Description)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customer.Customer_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Employee.Employee_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Payment_Type.PaymentType_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TaxRate.Tax_Description)
+    </td>
+    
+</tr>
+}
+
+    </table>
+</body>
+</html>

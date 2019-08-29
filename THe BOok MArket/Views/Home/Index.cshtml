@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Index2";
 
-    Layout = "~/Views/Shared/_Layoutfluid.cshtml";
+    Layout = "~/Views/Shared/Layout12.cshtml";
 }
 
 
@@ -188,165 +188,141 @@
     </style>
 </head>
 <body>
-    @*<nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="Home">The Book Market</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-time" aria-hidden="true"></i>Log Out in: <span id="minutes"></span>:<span id="seconds"></span></a></li>
-                    <li><a href="#"><i class="fa fa-question" aria-hidden="true"></i> Help</a></li>
-                    <li><a href="#" id="sign-out-link" onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
-                </ul>
-            </div>
-        </nav>*@
-    @*<ul class="vertical" id="links">
-            <li><a href="Home"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-            <li id="SS2">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                        <div><i class="fa fa-users" aria-hidden="true"></i> Customers <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse2" class="collapse secondary">
-                    <ul>
-                        <li>@Html.ActionLink("Add Customer ", "Create", "Customers")</li>
-                        <li><a href="MaintainCustomer">Maintain Customer</a></li>
-                        <li id="Nav2-3"><a href="SearchCustomer">Search Customers</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS1">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                        <div><i class="fa fa-user" aria-hidden="true"></i> Employees <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse1" class="collapse secondary">
-                    <ul>
-                        <li><a href="AddEmployee">Add Employee</a></li>
-                        <li id="Nav1-2"><a href="MaintainEmployee">Maintain Employee</a></li>
-                        <li><a href="AddEmployeeCategory">Add User Role</a></li>
-                        <li><a href="AddEmployeeCategory">Maintain User Role</a></li>
-                        <li><a href="AddEmployeeCategory">Search Employee</a></li>
-                        <li><a href="AddEmployeeCategory">Login</a></li>
-                        <li><a href="AddEmployeeCategory">Logout</a></li>
-                        <li><a href="AddEmployeeCategory">Change Password</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS3">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                        <div><i class="fa fa-cubes" aria-hidden="true"></i> Suppliers <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse3" class="collapse secondary">
-                    <ul>
-                        <li>@Html.ActionLink("Add Supplier", "Create", "Inventory_Supplier")</li>
-                        <li id="Nav3-2"><a href="MaintainRawMaterial">Maintain Raw Material</a></li>
-                        <li><a href="AddUniqueRawMaterial">Search Supplier</a></li>
-                        <li id="Nav3-11"><a href="MaintainUniqueRawMaterial">Place Supplier Order</a></li>
-                        <li><a href="AddPartType">Search Supplier Order</a></li>
-                        <li id="Nav3-4"><a href="MaintainPartType">Cancel Supplier Order</a></li>
-                        <li><a href="AddPart">Receive Supplier Order</a></li>
-                        <li><a href="MaintainPart">Return Supplier Order</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS4">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                        <div><i class="fa fa-gears" aria-hidden="true"></i> Sales <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse4" class="collapse secondary">
-                    <ul>
-                        <li>@Html.ActionLink("Make Sale", "Create", "Sales")</li>
-                        <li><a href="MaintainJobCard">Search Sale</a></li>
-                        <li><a href="ViewJobCards">Return Sale</a></li>
-                            <li id="Nav3-7"><a>View Production Schedule</a></li>
-                             <li><a>Maintain Production Schedule</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS5">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                        <div><i class="fa fa-truck" aria-hidden="true"></i> Payment Types <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse5" class="collapse secondary">
-                    <ul>
-                        <li>@Html.ActionLink("Add Payment Type", "Create", "Payment_Type")</li>
-                        <li>@Html.ActionLink("Maintain Payment Type", "Index", "Payment_Type")</li>
-                        <li>@Html.ActionLink("Search Payment Type", "Index", "Payment_Type")</li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS6">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-                        <div><i class="fa fa-shopping-cart" aria-hidden="true"></i> Prospective Books <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse6" class="collapse secondary">
-                    <ul>
-                        <li><a href="GenerateCustomerQuote">Add Prospective Book</a></li>
-                        <li id="Nav6-2"><a href="PlaceCustomerOrder">Maintain Prospective Book</a></li>
-                        <li><a href="MaintainCustomerOrder">Search Prospective Book</a></li>
-                        <li id="Nav6-3"><a href="GeneratePriceList">Process Prospective Book</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS7">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
-                        <div><i class="fa fa-suitcase" aria-hidden="true"></i> Book Requests <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse7" class="collapse secondary">
-                    <ul>
-                        <li><a href="AddSubContractor">Add Book Request</a></li>
-                        <li><a href="MaintainSubContractor">Maintain Book Request</a></li>
-                        <li id="Nav7-3"><a href="SearchSubContractor">Search Book Request</a></li>
-                        <li id="Nav7-3"><a href="SearchSubContractor">Process Book Request</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS8">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
-                        <div><i class="fa fa-plug" aria-hidden="true"></i> Inventory <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse8" class="collapse secondary">
-                    <ul>
-                        <li><a href="AddMachine">Add Inventory</a></li>
-                        <li><a href="MaintainMachine">Maintain Inventory</a></li>
-                        <li><a href="AddUniqueMachine">Search Inventorye</a></li>
-                        <li><a href="MaintainUniqueMachine">Write-Off Inventory</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li id="SS9">
-                <div>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
-                        <div><i class="fa fa-area-chart" aria-hidden="true"></i> Inventory Types <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-                <div id="collapse9" class="collapse secondary">
-                    <ul>
-                        <li><a href="AddCustomer">Add Inventory Type</a></li>
-                        <li><a href="MaintainCustomer">Maintain Inventory Type</a></li>
-                        <li id="Nav2-3"><a href="SearchCustomer">Search Inventory Type</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-        <div class="container custom_container">
-            <asp:ContentPlaceHolder ID="maincontent" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>*@
+
+    <script src="~/Scripts/Chart/exporting.js"></script>
+    <script src="~/Scripts/Chart/highcharts.js"></script>
+    <div class="jumbotron">
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    </div>
+
+    <script>
+
+
+
+    @*Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Inventory Type Ratio'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Inventory Type',
+            colorByPoint: true,
+            data: [
+        @{
+            HighChart.Controllers.HomeController.Ratio obj = (new HighChart.Controllers.HomeController()).PiechartValues();
+            <text>
+            {
+                name: 'Books',
+                y: @obj.Book
+
+            }, {
+                name: 'Accessories',
+                y: @obj.Accessories
+            }, {
+                name: 'Stationery',
+                y: @obj.Stationery
+
+            }
+            </text>
+        }
+               ]
+        }]
+    });
+    </script>*@
+
+    <div class="jumbotron">
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+        <div id="container"></div>
+    </div>
+
+    <script>
+        Highcharts.chart('container', {
+
+            title: {
+                text: 'The Book Market Projected Growth Rate, 2020-2025'
+            },
+
+            subtitle: {
+                text: 'Source: theBookMarket.co.za'
+            },
+
+            yAxis: {
+                title: {
+                    //text: 'Number of Employees'
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 2020
+                }
+            },
+
+            series: [{
+                name: 'Customers',
+                data: [1560, 2310, 3100, 4320, 4890, 5321, 5890, 6492]
+            }, {
+                name: 'Book Purchases',
+                data: [245, 345, 560, 750, 1203, 1679, 2340, 2920]
+            }, {
+                name: 'Sales',
+                data: [1174, 1772, 2590, 3560, 4120, 4789, 5123, 5689]
+            }, {
+                name: 'Book Requests',
+                data: [390, 670, 798, 1216, 1511, 2245, 3440, 3422]
+            }, {
+                name: 'Inventory',
+                data: [2812, 3214, 3890, 4579, 5362, 6201, 7393, 8321]
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+    </script>
 </body>
 </html>

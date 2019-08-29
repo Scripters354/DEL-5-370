@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using THe_BOok_MArket.Models;
+using Microsoft.Reporting.WebForms;
 
 namespace THe_BOok_MArket.Controllers
 {
@@ -59,6 +60,66 @@ namespace THe_BOok_MArket.Controllers
         {
             return View();
         }
+
+        public ActionResult InventoryTypeList()
+        {
+            return View(/*db.Inventory_Type.ToList()*/);
+        }
+
+        public ActionResult Reports(string ReportType)
+        {
+            LocalReport localreport = new LocalReport();
+            localreport.ReportPath = Server.MapPath("~/Reports/InventoryTypeReport.rdlc");
+
+            ReportDataSource reportDataSource = new ReportDataSource();
+            reportDataSource.Name = "InventoryTypeDataSet";
+            reportDataSource.Value = db.Inventory_Type.ToList();
+            localreport.DataSources.Add(reportDataSource);
+            string reportType = ReportType;
+            string mimeType;
+            string encoding;
+            string fileNameExtension;
+            if (reportType == "Excel")
+            {
+                fileNameExtension = "xlsx";
+            }
+            else if (reportType == "Word")
+            {
+                fileNameExtension = "docx";
+            }
+
+            else if (reportType == "PDF")
+            {
+                fileNameExtension = "pdf";
+            }
+
+            else if (reportType == "Excel")
+            {
+                fileNameExtension = "xlsx";
+            }
+
+            else
+            {
+                fileNameExtension = "jpg";
+            }
+
+            string[] streams;
+            Warning[] warnings;
+            byte[] renderedByte;
+            renderedByte = localreport.Render(reportType, "", out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
+            Response.AddHeader("content-disposition", "attachment;filename = Inventory_Type_Report." + fileNameExtension);
+            return File(renderedByte, fileNameExtension);
+
+
+        }
+
+
+
+        //public ActionResult InventoryList()
+        //{
+        //    var inventoryList = db.Inventories.ToList();
+        //    return View(inventoryList);
+        //}
 
         // POST: Inventory_Type/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

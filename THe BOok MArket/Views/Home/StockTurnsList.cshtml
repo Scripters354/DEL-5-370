@@ -1,0 +1,44 @@
+﻿@model IEnumerable<THe_BOok_MArket.Models.Stock_Turns>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StockTurnsList</title>
+</head>
+<body>
+    <h2>All Stock Turns Information</h2>
+
+    @Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
+    @Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+    @Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
+    @Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" }) |
+
+
+    <br /><br />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Turn_Over_Ratio)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Turn_Over_Ratio)
+                </td>
+             
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

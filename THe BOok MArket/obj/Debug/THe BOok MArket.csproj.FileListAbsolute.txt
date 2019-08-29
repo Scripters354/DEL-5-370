@@ -1,3 +1,7 @@
+C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\RdlCompile.cache
+C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\RdlCompile.compiled
+C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
+C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\THe BOok MArket.dll.config
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\THe BOok MArket.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\THe BOok MArket.pdb
@@ -50,10 +54,14 @@ C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\roslyn\vbc.rsp
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Antlr3.Runtime.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportSource.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.Shared.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Dapper.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\EntityFramework.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\EntityFramework.SqlServer.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Microsoft.ReportViewer.WebForms.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Newtonsoft.Json.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\QRCoder.dll
@@ -66,10 +74,25 @@ C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.WebPages.Deployment.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.WebPages.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.WebPages.Razor.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\WebGrease.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\stdole.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Dapper.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\EntityFramework.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\EntityFramework.SqlServer.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Microsoft.ReportViewer.WebForms.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Newtonsoft.Json.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.Helpers.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.Mvc.xml
@@ -79,8 +102,6 @@ C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.WebPages.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.WebPages.Deployment.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\System.Web.WebPages.Razor.xml
 C:\Users\ose\Desktop\DDD\THe BOok MArket\bin\Antlr3.Runtime.pdb
-C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\THe BOok MArket.csprojAssemblyReference.cache
-C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CoreCompileInputs.cache
 C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
 C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\THe BOok MArket.dll
 C:\Users\ose\Desktop\DDD\THe BOok MArket\obj\Debug\THe BOok MArket.pdb

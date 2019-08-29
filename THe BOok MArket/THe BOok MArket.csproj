@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
     </Reference>
@@ -73,6 +76,7 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -168,11 +172,17 @@
     <Compile Include="Controllers\ProfilePicController.cs" />
     <Compile Include="Controllers\Prospective_BookController.cs" />
     <Compile Include="Controllers\PurchaseController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Controllers\UsersAuthController.cs" />
     <Compile Include="EncryptPassword.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\Book.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -306,7 +316,32 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="MyRoleProvider.cs" />
+    <Compile Include="OrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaleSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockTurnSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockTurnSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="The_Book_MarketDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>The_Book_MarketDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="alertify\alertify.min %282018_09_14 23_39_29 UTC%29.js" />
@@ -445,6 +480,8 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\Chart\exporting.js" />
+    <Content Include="Scripts\Chart\highcharts.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -466,6 +503,39 @@
     <Content Include="icons-reference\fonts\dashboard.eot" />
     <Content Include="icons-reference\fonts\dashboard.ttf" />
     <Content Include="icons-reference\fonts\dashboard.woff" />
+    <Content Include="InventoryDataSet.xsc">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="InventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="InventoryDataSet.xss">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="OrderDataSet.xsc">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="OrderDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="OrderDataSet.xss">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="SaleSet.xsc">
+      <DependentUpon>SaleSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SaleSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SaleSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SaleSet.xss">
+      <DependentUpon>SaleSet.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -755,6 +825,49 @@
     <Content Include="Views\Book_Supplier\Index.cshtml" />
     <Content Include="Views\Shared\Layout10.cshtml" />
     <Content Include="Views\Shared\Layout12.cshtml" />
+    <Content Include="Views\Reports\InventoryReport.cshtml" />
+    <Content Include="Views\Inventories\InventoryReport.cshtml" />
+    <Content Include="Views\Reports\InventoryTypeList.cshtml" />
+    <Content Include="The_Book_MarketDataSet.xsc">
+      <DependentUpon>The_Book_MarketDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="StockTurnSet.xsc">
+      <DependentUpon>StockTurnSet.xsd</DependentUpon>
+    </Content>
+    <None Include="StockTurnSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockTurnSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="StockTurnSet.xss">
+      <DependentUpon>StockTurnSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="SupplierDataSet.xsc">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SupplierDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupplierDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SupplierDataSet.xss">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="The_Book_MarketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>The_Book_MarketDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="The_Book_MarketDataSet.xss">
+      <DependentUpon>The_Book_MarketDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Inventory_Type\InventoryTypeList.cshtml" />
+    <Content Include="Views\Home\InventoryList.cshtml" />
+    <Content Include="Views\Home\SalesList.cshtml" />
+    <Content Include="Views\Home\OrderList.cshtml" />
+    <Content Include="Views\Home\SuppOrderList.cshtml" />
+    <Content Include="Views\Home\StockTurnsList.cshtml" />
+    <Content Include="Views\Home\InventoryTypeList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -767,9 +880,18 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Inventory.rdlc" />
+    <EmbeddedResource Include="Reports\InventoryTypeReport.rdlc" />
+    <EmbeddedResource Include="Reports\Order.rdlc" />
+    <EmbeddedResource Include="Reports\Sale.rdlc" />
+    <EmbeddedResource Include="Reports\StockTurns.rdlc" />
+    <EmbeddedResource Include="Reports\Supplier.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

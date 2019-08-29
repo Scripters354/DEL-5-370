@@ -19,18 +19,8 @@
         <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml">Home</a></li>
         <li class="breadcrumb-item active">Search for Books</li>
     </ul>
-</div>
-<p>
-    @using (Html.BeginForm("Index", "Books", FormMethod.Get))
-    {
-        <b>SearchBy:</b> @Html.RadioButton("searchBy", "BookTitle", true) <text>Book Title</text>
-        @Html.RadioButton("searchBy", "BookAuthor") <text>Book Author</text>
-        @Html.RadioButton("searchBy", "ISBN") <text>ISBN</text>
-        <br />
-        @Html.TextBox("search") <input type="submit" value="Search" />
-    }
+</div> 
 
-</p>
 <section class="forms">
     <div class="container-fluid">
         <div class="row">
@@ -42,6 +32,18 @@
                     </div>
 
                     <div class="card-body">
+                        <p>
+                            @using (Html.BeginForm("Index", "Books", FormMethod.Get))
+                            {
+                                <b>SearchBy:</b> @Html.RadioButton("searchBy", "BookTitle", true) <text>Book Title</text>
+                                @Html.RadioButton("searchBy", "BookAuthor") <text>Book Author</text>
+                                @Html.RadioButton("searchBy", "ISBN") <text>ISBN</text>
+                                <br />
+                                @Html.TextBox("search") <input type="submit" value="Search" />
+                            }
+
+                        </p>
+
 
                         <p>
                             @Html.ActionLink("Add Prospective Book?", "Index", "Prospective_Book")

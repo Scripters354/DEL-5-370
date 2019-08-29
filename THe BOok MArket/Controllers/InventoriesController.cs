@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using THe_BOok_MArket.Models;
+using CrystalDecisions.CrystalReports.Engine;
+using System.IO;
 
 namespace THe_BOok_MArket.Controllers
 {
@@ -149,6 +151,42 @@ namespace THe_BOok_MArket.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult InventoryList()
+        {
+            var inventoryList = db.Inventories.ToList();
+            return View(inventoryList);
+        }
+        public ActionResult ExInvReport()
+        {
+            List<Inventory> allInventory = new List<Inventory>();
+            allInventory = db.Inventories.ToList();
+
+            ReportDocument ad = new ReportDocument();
+            ad.Load(Path.Combine(Server.MapPath("~/InvReport"), "InvCrysRep.rpt"));
+
+            ad.SetDataSource(db.Inventories.Select(c => new { Inventory_ID = c.Inventory_ID }).ToList());
+            //ad.SetDataSource(db.Inventories.Select(c => new { c.Inventory_Name }).ToList());
+            //rd.SetDataSource(db.Customers.Select(c => new { c.Customer_Surname }).ToList());
+            //rd.SetDataSource(db.Customers.Select(c => new { c.Customer_Email }).ToList());
+            //rd.SetDataSource(db.Customers.Select(c => new { c.Customer_Contact.Value }).ToList());
+
+            Response.Buffer = false;
+            Response.ClearContent();
+            Response.ClearHeaders();
+            try
+            {
+                Stream stream = ad.ExportToStream(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat);
+                stream.Seek(0, SeekOrigin.Begin);
+                return File(stream, "application/pdf", "InventoryList.pdf");
+
+            }
+            catch
+            {
+                throw;
+            }
+
         }
     }
 }
