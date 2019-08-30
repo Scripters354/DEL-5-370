@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<THe_BOok_MArket.Models.Sale>
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/Layout12.cshtml";
 }
 
 <!DOCTYPE html>
@@ -14,10 +14,10 @@
 <body>
     <h2>All Sales Information</h2>
 
-    @Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
-    @Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
-    @Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
-    @Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" }) |
+    @Html.ActionLink("Export to Excel", "SaleReports", new { ReportType = "Excel" }) |
+    @Html.ActionLink("Export to PDF", "SaleReports", new { ReportType = "PDF" }) |
+    @Html.ActionLink("Export to Word", "SaleReports", new { ReportType = "Word" }) |
+    @Html.ActionLink("Export to Image", "SaleReports", new { ReportType = "Image" }) |
 
 
     <br /><br />

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<THe_BOok_MArket.Models.Inventory>
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/Layout12.cshtml";
 }
 
 <!DOCTYPE html>
@@ -19,10 +19,70 @@
     @Html.ActionLink("Export to Word", "InvReports", new { ReportType = "Word" }) |
     @Html.ActionLink("Export to Image", "InvReports", new { ReportType = "Image" }) |
 
+
+    <script src="~/Scripts/Chart/exporting.js"></script>
+    <script src="~/Scripts/Chart/highcharts.js"></script>
+    <div class="jumbotron">
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    </div>
+
+    <script>
+
+
+
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Inventory Type Ratio'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Inventory Type',
+            colorByPoint: true,
+            data: [
+        @{
+            THe_BOok_MArket.Controllers.HomeController.Ratio obj = (new THe_BOok_MArket.Controllers.HomeController()).PiechartValues();
+            <text>
+            {
+                name: 'Books',
+                y: @obj.Book
+
+            }, {
+                name: 'Accessories',
+                y: @obj.Accessories
+            }, {
+                name: 'Stationery',
+                y: @obj.Stationery
+
+            }
+            </text>
+        }
+               ]
+        }]
+    });
+    </script>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Inventory_Name)
+                @Html.DisplayNameFor(model => model.Inventory_Type_ID)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Inventory_Description)
@@ -46,7 +106,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Inventory_Name)
+                    @Html.DisplayFor(modelItem => item.Inventory_Type_ID)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Inventory_Description)
@@ -63,7 +123,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Stock_Turns.Turn_Over_Ratio)
                 </td>
-                
+
             </tr>
         }
 

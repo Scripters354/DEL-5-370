@@ -1,0 +1,53 @@
+﻿@model IEnumerable<THe_BOok_MArket.Models.Inventory_Supplier_Order>
+
+@{
+    Layout = "~/Views/Shared/Layout12.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory_Supplier.InvSupp_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Status.Order_Status_Description)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inventory_Supplier.InvSupp_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Status.Order_Status_Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.InvSuppOrder_ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.InvSuppOrder_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.InvSuppOrder_ID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

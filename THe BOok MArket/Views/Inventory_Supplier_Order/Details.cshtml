@@ -1,0 +1,50 @@
+﻿@model THe_BOok_MArket.Models.Inventory_Supplier_Order
+
+@{
+    Layout = "~/Views/Shared/Layout12.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Inventory_Supplier_Order</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Order_Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Order_Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Inventory_Supplier.InvSupp_Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Inventory_Supplier.InvSupp_Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Order_Status.Order_Status_Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Order_Status.Order_Status_Description)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.InvSuppOrder_ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

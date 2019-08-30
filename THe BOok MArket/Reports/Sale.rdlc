@@ -24,7 +24,7 @@
         <Top>0.26958in</Top>
         <Left>0.33208in</Left>
         <Height>0.25in</Height>
-        <Width>8.07292in</Width>
+        <Width>5.59375in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -39,13 +39,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.82986in</Width>
+              <Width>1.15278in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.82986in</Width>
+              <Width>1.17361in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.82986in</Width>
+              <Width>1.26737in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1in</Width>
@@ -410,7 +410,7 @@
         <Top>1.17583in</Top>
         <Left>0.33208in</Left>
         <Height>0.5in</Height>
-        <Width>7.48958in</Width>
+        <Width>5.59375in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -418,11 +418,41 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="ExecutionTime">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Globals!ExecutionTime</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ExecutionTime</rd:DefaultName>
+        <Top>0.26958in</Top>
+        <Left>4.67583in</Left>
+        <Height>0.25in</Height>
+        <Width>1.25in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>8.405in</Width>
+  <Width>6.07167in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

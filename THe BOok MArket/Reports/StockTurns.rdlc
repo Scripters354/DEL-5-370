@@ -24,7 +24,7 @@
         <Top>0.155in</Top>
         <Left>0.69667in</Left>
         <Height>0.25in</Height>
-        <Width>5.17708in</Width>
+        <Width>4.17708in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -270,7 +270,7 @@
         </TablixRowHierarchy>
         <DataSetName>StockTurnSet</DataSetName>
         <Top>0.85292in</Top>
-        <Left>1.93625in</Left>
+        <Left>1.08208in</Left>
         <Height>0.5in</Height>
         <Width>3.9375in</Width>
         <ZIndex>1</ZIndex>
@@ -280,11 +280,41 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="ExecutionTime">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Globals!ExecutionTime</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ExecutionTime</rd:DefaultName>
+        <Top>0.155in</Top>
+        <Left>4.01958in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>5.625in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

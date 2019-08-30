@@ -167,12 +167,16 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoriesController.cs" />
     <Compile Include="Controllers\Inventory_SupplierController.cs" />
+    <Compile Include="Controllers\Inventory_Supplier_OrderController.cs" />
     <Compile Include="Controllers\Inventory_TypeController.cs" />
+    <Compile Include="Controllers\Order_LineController.cs" />
     <Compile Include="Controllers\Payment_TypeController.cs" />
     <Compile Include="Controllers\ProfilePicController.cs" />
     <Compile Include="Controllers\Prospective_BookController.cs" />
     <Compile Include="Controllers\PurchaseController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
+    <Compile Include="Controllers\Stock_TurnsController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Controllers\UsersAuthController.cs" />
     <Compile Include="EncryptPassword.cs" />
@@ -868,6 +872,26 @@
     <Content Include="Views\Home\SuppOrderList.cshtml" />
     <Content Include="Views\Home\StockTurnsList.cshtml" />
     <Content Include="Views\Home\InventoryTypeList.cshtml" />
+    <Content Include="Views\Stock_Turns\Create.cshtml" />
+    <Content Include="Views\Stock_Turns\Delete.cshtml" />
+    <Content Include="Views\Stock_Turns\Details.cshtml" />
+    <Content Include="Views\Stock_Turns\Edit.cshtml" />
+    <Content Include="Views\Stock_Turns\Index.cshtml" />
+    <Content Include="Views\Sales\Create.cshtml" />
+    <Content Include="Views\Sales\Delete.cshtml" />
+    <Content Include="Views\Sales\Details.cshtml" />
+    <Content Include="Views\Sales\Edit.cshtml" />
+    <Content Include="Views\Sales\Index.cshtml" />
+    <Content Include="Views\Order_Line\Create.cshtml" />
+    <Content Include="Views\Order_Line\Delete.cshtml" />
+    <Content Include="Views\Order_Line\Details.cshtml" />
+    <Content Include="Views\Order_Line\Edit.cshtml" />
+    <Content Include="Views\Order_Line\Index.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Create.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Delete.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Details.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Edit.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -221,10 +221,10 @@
                             <li>
                                 <a href="#reportingdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-presentation"></i> Reporting </a>
                                 <ul id="reportingdropdownDropdown" class="collapse list-unstyled ">
-                                    <li><a href="#">Sales Report</a></li>
-                                    <li><a href="#">Supplier Performance Report</a></li>
-                                    <li><a href="#">Supplier Orders</a></li>
-                                    <li><a href="#">Inventory Report</a></li>
+                                    <li>@Html.ActionLink("Sales Report", "SalesList", "Home")</li>
+                                    <li>@Html.ActionLink("Supplier Performance Report", "SuppOrderList", "Home")</li>
+                                    <li>@Html.ActionLink("Orders", "OrderList", "Home")</li>
+                                    <li>@Html.ActionLink("Inventory Report", "InventoryList", "Home")</li>
                                 </ul>
                             </li>
                     }

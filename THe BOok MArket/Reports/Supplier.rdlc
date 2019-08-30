@@ -30,7 +30,7 @@
         <Top>0.22792in</Top>
         <Left>0.4675in</Left>
         <Height>0.25in</Height>
-        <Width>7.08333in</Width>
+        <Width>4.59375in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -45,21 +45,21 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.7825in</Width>
+              <Width>1.06896in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.40625in</Width>
+              <Width>1.21354in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.2175in</Width>
+              <Width>1.50396in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.80729in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.66667in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -192,7 +192,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.66667in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -345,10 +345,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>SupplierDataSet</DataSetName>
-        <Top>0.92583in</Top>
-        <Left>1.14458in</Left>
-        <Height>0.5in</Height>
-        <Width>6.40625in</Width>
+        <Top>0.78in</Top>
+        <Left>0.4675in</Left>
+        <Height>1.33333in</Height>
+        <Width>4.59375in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -357,10 +357,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.32166in</Height>
     <Style />
   </Body>
-  <Width>8.2175in</Width>
+  <Width>5.06125in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

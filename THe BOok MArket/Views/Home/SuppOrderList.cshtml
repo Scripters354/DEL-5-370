@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<THe_BOok_MArket.Models.Order_Line>
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/Layout12.cshtml";
 }
 
 <!DOCTYPE html>
@@ -14,10 +14,10 @@
 <body>
     <h2>All Supplier Order Information</h2>
 
-    @Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
-    @Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
-    @Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
-    @Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" }) |
+    @Html.ActionLink("Export to Excel", "SupReports", new { ReportType = "Excel" }) |
+    @Html.ActionLink("Export to PDF", "SupReports", new { ReportType = "PDF" }) |
+    @Html.ActionLink("Export to Word", "SupReports", new { ReportType = "Word" }) |
+    @Html.ActionLink("Export to Image", "SupReports", new { ReportType = "Image" }) |
 
 
     <br /><br />
@@ -33,7 +33,7 @@
                 @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Inventory.Inventory_Name)
+                @Html.DisplayNameFor(model => model.Inventory.Inventory_Type_ID)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Inventory_Supplier_Order.InvSuppOrder_ID)
@@ -57,7 +57,7 @@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Inventory.Inventory_Name)
+                    @Html.DisplayFor(modelItem => item.Inventory.Inventory_Type_ID)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Inventory_Supplier_Order.InvSuppOrder_ID)

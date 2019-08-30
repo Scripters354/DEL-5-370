@@ -28,7 +28,7 @@ namespace THe_BOok_MArket.Models
     
         public int Inventory_ID { get; set; }
         public Nullable<int> InventoryType_ID { get; set; }
-        public string Inventory_Name { get; set; }
+        public string Inventory_Type_ID { get; set; }
         public string Inventory_Description { get; set; }
         public Nullable<int> Inventory_Quantity { get; set; }
         public Nullable<int> Minimum_Quantity { get; set; }

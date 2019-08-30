@@ -22,9 +22,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.35292in</Top>
-        <Left>0.43625in</Left>
+        <Left>0.49875in</Left>
         <Height>0.25in</Height>
-        <Width>5.625in</Width>
+        <Width>5.15625in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -39,19 +39,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.73611in</Width>
+              <Width>1.23611in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73611in</Width>
+              <Width>0.73611in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73611in</Width>
+              <Width>0.73611in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.60417in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.84375in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1in</Width>
@@ -59,7 +59,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.83396in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -70,7 +70,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Inv Supp Order ID</Value>
+                              <Value>Inventory Supplier Order ID</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -127,14 +127,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox6">
+                    <Textbox Name="SuppOrder_Status_ID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Supp Order Status ID</Value>
+                              <Value>=Fields!SuppOrder_Status_ID.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -143,7 +143,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <rd:DefaultName>SuppOrder_Status_ID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -256,7 +256,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.83396in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -324,14 +324,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="SuppOrder_Status_ID">
+                    <Textbox Name="Textbox6">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!SuppOrder_Status_ID.Value</Value>
+                              <Value>Supplier Order Status ID</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -340,7 +340,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>SuppOrder_Status_ID</rd:DefaultName>
+                      <rd:DefaultName>Textbox6</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -475,10 +475,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>OrderDataSet</DataSetName>
-        <Top>1.01958in</Top>
-        <Left>0.85292in</Left>
-        <Height>0.5in</Height>
-        <Width>8.20833in</Width>
+        <Top>0.7175in</Top>
+        <Left>0.49875in</Left>
+        <Height>1.66792in</Height>
+        <Width>5.15625in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -486,11 +486,41 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="ExecutionTime">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Globals!ExecutionTime</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ExecutionTime</rd:DefaultName>
+        <Top>0.35292in</Top>
+        <Left>4.655in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.60417in</Height>
     <Style />
   </Body>
-  <Width>9.06125in</Width>
+  <Width>6.00917in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
