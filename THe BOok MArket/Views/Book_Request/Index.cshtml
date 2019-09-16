@@ -35,7 +35,6 @@
                     <div class="card-body">
                         <div class="table-responsive">
 
-
                             <p>
                                 @using (Html.BeginForm("Index", "Book_Request", FormMethod.Get))
                                 {
@@ -48,8 +47,13 @@
 
                             </p>
 
-
-
+                            @using (Html.BeginForm("Index", "Help", FormMethod.Post))
+                            {
+                                <p>
+                                    <input type="hidden" name="action" value="searchBookRequest" />
+                                    <button type="submit" style="background:none;border:none;text-decoration:none;cursor:pointer;color:#7985d4">help</button>
+                                </p>
+                            }
 
                             <table class="table">
                                 <tr>
@@ -63,14 +67,14 @@
                                         Book Edition
                                     </th>
                                     @*<th>
-                                            @Html.DisplayNameFor(model => model.Customer_Name)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Customer_Surname)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Customer_Phone)
-                                        </th>*@
+                    @Html.DisplayNameFor(model => model.Customer_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer_Surname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer_Phone)
+                </th>*@
                                     <th>
                                         Customer Name
                                     </th>
@@ -90,14 +94,14 @@
                                             @Html.DisplayFor(modelItem => item.Book_Edition)
                                         </td>
                                         @*<td>
-                                                @Html.DisplayFor(modelItem => item.Customer_Name)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Customer_Surname)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Customer_Phone)
-                                            </td>*@
+                        @Html.DisplayFor(modelItem => item.Customer_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customer_Surname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customer_Phone)
+                    </td>*@
                                         <td>
                                             @Html.DisplayFor(modelItem => item.Customer.Customer_Name)
                                         </td>

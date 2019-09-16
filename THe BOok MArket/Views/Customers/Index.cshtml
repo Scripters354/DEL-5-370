@@ -45,6 +45,13 @@
 
                             </p>
 
+                            @using (Html.BeginForm("Index", "Help", FormMethod.Post))   /*COPY THIS TO ADD A HELP LINK*/
+                            {
+                                <p>
+                                    <input type="hidden" name="action" value="searchCustomer" /> <!--CHANGE THIS LINE value="desiredAction"-->
+                                    <button type="submit" style="background:none;border:none;text-decoration:none;cursor:pointer;color:#7985d4">help</button>
+                                </p>
+                            }                                                           <!--/*COPY THIS TO ADD A HELP LINK*-->
 
                             <p>
                                 @Html.ActionLink("Create New", "Create")
@@ -52,12 +59,12 @@
                             <table class="table">
                                 <tr>
                                     <th>
-                                       Name
+                                        Name
                                     <th>
-                                       Surname
+                                        Surname
                                     </th>
                                     <th>
-                                       Email
+                                        Email
                                     </th>
                                     <th>
                                         Contact

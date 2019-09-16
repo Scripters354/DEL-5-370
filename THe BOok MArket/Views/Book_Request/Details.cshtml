@@ -7,6 +7,14 @@
 
 <h2>Details</h2>
 
+@using (Html.BeginForm("Index", "Help", FormMethod.Post))
+{
+    <p>
+        <input type="hidden" name="action" value="editBookRequest" />
+        <button type="submit" style="background:none;border:none;text-decoration:none;cursor:pointer;color:#7985d4">help</button>
+    </p>
+}
+
 <div>
     <h4>Book_Request</h4>
     <hr />
@@ -36,32 +44,32 @@
         </dd>
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.Customer_Name)
-        </dt>
+                @Html.DisplayNameFor(model => model.Customer_Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Customer_Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Customer_Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Customer_Surname)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Customer_Surname)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Customer_Surname)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Customer_Surname)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Customer_Phone)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Customer_Phone)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Customer_Phone)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Customer_Phone)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Customer.Customer_Name)
-        </dt>*@
+            <dt>
+                @Html.DisplayNameFor(model => model.Customer.Customer_Name)
+            </dt>*@
 
         <dd>
             @Html.DisplayFor(model => model.Customer.Customer_Name)

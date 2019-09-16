@@ -172,5 +172,21 @@ $(document).ready(function () {
 
         return false;
     });
-
+    var help = {
+        "login": {
+            "heading": "How to login",
+            "message": "Login by doing ..."
+        },
+        "makePayment": {
+            "heading": "How to make a payment",
+            "message": "Make a payment by doing what what what"
+        }
+    };
+    // ------------------------------------------------------ //
+    // Show help message
+    // ------------------------------------------------------ //
+    $("a#help").on('click', function (e) {
+        $("div#helpPopup").text(help.login);
+        e.preventDefault();
+    });
 });

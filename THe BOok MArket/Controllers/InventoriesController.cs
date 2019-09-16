@@ -22,7 +22,7 @@ namespace THe_BOok_MArket.Controllers
         {
             if (searchBy == "Name")
             {
-                return View(db.Inventories.Where(x => x.Inventory_Type_ID.Contains(search) || search == null).ToList());
+                return View(db.Inventories.Where(x => x.Inventory_Name.Contains(search) || search == null).ToList());
             }
             else if (searchBy == "Description")
             {

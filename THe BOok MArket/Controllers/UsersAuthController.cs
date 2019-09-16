@@ -121,33 +121,40 @@ namespace THe_BOok_MArket.Controllers
             string message = "";
             using (The_Book_MarketEntities dc = new The_Book_MarketEntities())
             {
-                var v = dc.Users.Where(a => a.UserName == login.UserName).FirstOrDefault();
-                if (v != null)
+                try
                 {
-                    if (v.IsUserVerified == false)
+                    var v = dc.Users.Where(a => a.UserName == login.UserName).FirstOrDefault();
+                    if (v != null)
                     {
-                        ViewBag.Message = "Please verify your email first";
-                        return View();
-                    }
-                   
-                    if (string.Compare(EncryptPassword.Hash(login.UserPassword), v.UserPassword) == 0)
-                    {
-                        int timeout = login.RememberMe ? 525600 : 20; // 525600 min = 1 year
-                        var ticket = new FormsAuthenticationTicket(login.UserName, login.RememberMe, timeout);
-                        string encrypted = FormsAuthentication.Encrypt(ticket);
-                        var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted);
-                        cookie.Expires = DateTime.Now.AddMinutes(timeout);
-                        cookie.HttpOnly = true;
-                        Response.Cookies.Add(cookie);
-
-
-                        if (Url.IsLocalUrl(ReturnUrl))
+                        if (v.IsUserVerified == false)
                         {
-                            return Redirect(ReturnUrl);
+                            ViewBag.Message = "Please verify your email first";
+                            return View();
+                        }
+
+                        if (string.Compare(EncryptPassword.Hash(login.UserPassword), v.UserPassword) == 0)
+                        {
+                            int timeout = login.RememberMe ? 525600 : 20; // 525600 min = 1 year
+                            var ticket = new FormsAuthenticationTicket(login.UserName, login.RememberMe, timeout);
+                            string encrypted = FormsAuthentication.Encrypt(ticket);
+                            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted);
+                            cookie.Expires = DateTime.Now.AddMinutes(timeout);
+                            cookie.HttpOnly = true;
+                            Response.Cookies.Add(cookie);
+
+
+                            if (Url.IsLocalUrl(ReturnUrl))
+                            {
+                                return Redirect(ReturnUrl);
+                            }
+                            else
+                            {
+                                return RedirectToAction("Index", "Home");
+                            }
                         }
                         else
                         {
-                            return RedirectToAction("Index", "Home");
+                            message = "Invalid credential provided";
                         }
                     }
                     else
@@ -155,12 +162,15 @@ namespace THe_BOok_MArket.Controllers
                         message = "Invalid credential provided";
                     }
                 }
-                else
+                catch (Exception e)
                 {
-                    message = "Invalid credential provided";
+                    ViewBag.Message = e.Message;
                 }
+
             }
-            ViewBag.Message = message;
+            if (message != "")
+                ViewBag.Message = message;
+
             return View();
         }
 

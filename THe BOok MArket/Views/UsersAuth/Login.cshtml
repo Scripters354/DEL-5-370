@@ -68,9 +68,14 @@
                                     </div>
                                 </div>
                             }
-
-
                         </div>
+                        @using (Html.BeginForm("Index", "Help", FormMethod.Post))   /*COPY THIS TO ADD A HELP LINK*/
+                        {
+                            <p>
+                                <input type="hidden" name="action" value="login" /> <!--CHANGE THIS LINE value="desiredAction"-->
+                                <button type="submit" style="background:none;border:none;text-decoration:none;cursor:pointer;color:#7985d4">help</button>
+                            </p>
+                        }
                     </div>
                 </div>
             </div>

@@ -3,8 +3,17 @@
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/Layout12.cshtml";
+}
 
 <h2>Details</h2>
+
+@using (Html.BeginForm("Index", "Help", FormMethod.Post))
+{
+    <p>
+        <input type="hidden" name="action" value="editCustomer" />
+        <button type="submit" style="background:none;border:none;text-decoration:none;cursor:pointer;color:#7985d4">help</button>
+    </p>
+}
 
 <div>
     <h4>Customer</h4>

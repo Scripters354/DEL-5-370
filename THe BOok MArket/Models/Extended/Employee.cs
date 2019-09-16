@@ -43,7 +43,7 @@ namespace THe_BOok_MArket.Models
         [Display(Name = "Photo")]
         public string ImageData { get; set; }
 
-        public HttpPostedFileBase ImageFile { get; set; }
+        //public HttpPostedFileBase ImageFile { get; set; }
 
 
     }

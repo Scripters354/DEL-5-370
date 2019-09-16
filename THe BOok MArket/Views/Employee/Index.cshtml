@@ -33,12 +33,19 @@
 
                         <div class="card-body">
                             <div class="table-responsive">
+                                @using (Html.BeginForm("Index", "Help", FormMethod.Post))@*COPY THIS ONTO EVERY PAGE TO ADD A HELP LINK*@
+                                {
+                                    <p>
+                                        <input type="hidden" name="action" value="searchSearchEmployee" />  <!--EDIT THIS LINE value="desiredAction"-->
+                                        <button type="submit" style="background:none;border:none;text-decoration:none;cursor:pointer;color:#7985d4">help</button>
+                                    </p>
+                                }                                                       @*COPY THIS ONTO EVERY PAGE TO ADD A HELP LINK*@
 
                                 <table class="table">
 
                                     <tr>
                                         <th>
-                                           Name
+                                            Name
                                         </th>
                                         <th>
                                             Surname
@@ -56,9 +63,9 @@
                                             ID Number
                                         </th>
 
-                                       
+
                                         <th>
-                                           Title
+                                            Title
                                         </th>
 
                                         <th></th>
@@ -86,8 +93,8 @@
                                                 @Html.DisplayFor(modelItem => item.ID_Number)
                                             </td>
                                             @*<td>
-                                                @Html.DisplayFor(modelItem => item.ImageData)
-                                            </td>*@
+                        @Html.DisplayFor(modelItem => item.ImageData)
+                    </td>*@
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Employee_Gender.Gender_Description)
                                             </td>

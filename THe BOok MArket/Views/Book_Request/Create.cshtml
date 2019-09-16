@@ -30,10 +30,17 @@
 
                         <div class="card-header d-flex align-items-center">
                             <h3 class="h4">Book Request details</h3>
+
                         </div>
 
                         <div class="card-body">
-
+                            @using (Html.BeginForm("Index", "Help", FormMethod.Post))
+                            {
+                                <p>
+                                    <input type="hidden" name="action" value="addBookRequest" />
+                                    <button type="submit" style="background:none;border:none;text-decoration:none;cursor:pointer;color:#7985d4">help</button>
+                                </p>
+                            }
 
                             @using (Html.BeginForm())
                             {
