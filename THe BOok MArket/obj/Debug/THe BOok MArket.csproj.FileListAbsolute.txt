@@ -307,3 +307,6 @@ C:\Users\HP\Documents\School Work\2019\INF 370\INF 370\THe BOok MArket\obj\Debug
 C:\Users\HP\Documents\School Work\2019\INF 370\INF 370\THe BOok MArket\obj\Debug\THe BOok MArket.csproj.CopyComplete
 C:\Users\HP\Documents\School Work\2019\INF 370\INF 370\THe BOok MArket\obj\Debug\THe BOok MArket.dll
 C:\Users\HP\Documents\School Work\2019\INF 370\INF 370\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
+C:\Users\User\Desktop\inf370\THe BOok MArket\obj\Debug\THe BOok MArket.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\inf370\THe BOok MArket\obj\Debug\THe BOok MArket.dll
+C:\Users\User\Desktop\inf370\THe BOok MArket\obj\Debug\THe BOok MArket.pdb
